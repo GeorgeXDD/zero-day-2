@@ -971,6 +971,19 @@ button {
   grid-template-columns: 1.15fr 0.85fr;
   min-height: 720px;
 }
+.contact-grid.contact-generic {
+  grid-template-columns: 1fr;
+  min-height: calc(100vh - 82px);
+}
+.contact-generic .contact-copy {
+  padding-right: max(24px, calc((100vw - 1360px) / 2));
+}
+.contact-generic .contact-copy .lead {
+  max-width: 760px;
+}
+.contact-generic .contact-details {
+  width: min(100%, 980px);
+}
 .contact-copy {
   padding: 90px 70px 70px max(24px, calc((100vw - 1360px) /2));
   display: flex;

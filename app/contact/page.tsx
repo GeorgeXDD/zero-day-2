@@ -1,11 +1,10 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
 
 export const metadata: Metadata = {
-  title: 'Contact',
-  description: 'Contact the ZeroDayTM team about Edition #2.',
+  title: 'Contact us',
+  description: 'Contact the ZeroDayTM team.',
 };
 
 export default function ContactPage() {
@@ -13,53 +12,44 @@ export default function ContactPage() {
     <>
       <SiteHeader />
       <main>
-        <section className="contact-grid paper">
+        <section className="contact-grid contact-generic paper">
           <div className="contact-copy">
-            <p className="eyebrow">Contact / Edition #2</p>
+            <p className="eyebrow">Contact us</p>
             <h1 className="display">
-              Start the
+              Let&apos;s
               <br />
-              <span style={{ color: 'var(--purple)' }}>conversation.</span>
+              <span style={{ color: 'var(--purple)' }}>talk.</span>
             </h1>
             <p className="lead">
-              Questions about the event, CTF, speaking, volunteering or
-              partnerships are all welcome.
+              Questions about ZeroDayTM, our events, the CTF, partnerships or
+              the community are always welcome.
             </p>
             <div className="contact-details">
               <div className="contact-detail">
-                <small>Founder & Lead Organizer</small>
-                <strong>Fofiu Florin George</strong>
+                <small>Team</small>
+                <strong>ZeroDayTM Team</strong>
               </div>
               <div className="contact-detail">
                 <small>Email</small>
-                <a href="mailto:fofiu.george03@gmail.com">
-                  fofiu.george03@gmail.com ↗
+                <a href="mailto:zerodaytm@gmail.com">
+                  zerodaytm@gmail.com ↗
                 </a>
               </div>
               <div className="contact-detail">
                 <small>Phone</small>
-                <a href="tel:+40772218314">+40 772 218 314 ↗</a>
+                <a href="tel:+40772218314">0772 218 314 ↗</a>
               </div>
               <div className="contact-detail">
                 <small>LinkedIn</small>
                 <a
-                  href="https://www.linkedin.com/in/george-fofiu-6ab38a1ab/"
+                  href="https://www.linkedin.com/company/zerodaytm/"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Connect with George ↗
+                  ZeroDayTM on LinkedIn ↗
                 </a>
               </div>
             </div>
-          </div>
-          <div className="contact-portrait photo">
-            <Image
-              src="/images/george-contact.jpg"
-              alt="Fofiu Florin George speaking at ZeroDayTM"
-              fill
-              priority
-              sizes="(max-width: 720px) 100vw, 42vw"
-            />
           </div>
         </section>
       </main>

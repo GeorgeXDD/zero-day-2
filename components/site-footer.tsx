@@ -14,8 +14,8 @@ export function SiteFooter() {
               <br />
               Timișoara · Spring 2027
             </p>
-            <a href="mailto:fofiu.george03@gmail.com">
-              fofiu.george03@gmail.com ↗
+            <a href="mailto:zerodaytm@gmail.com">
+              zerodaytm@gmail.com ↗
             </a>
           </div>
         </div>
