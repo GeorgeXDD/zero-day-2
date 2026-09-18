@@ -9,6 +9,9 @@
   --purple: #7444df;
   --muted: #6f6c67;
   --line: rgba(11, 11, 12, 0.2);
+  --font-display: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  --font-body: Arial, Helvetica, sans-serif;
+  --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
 }
 
 * {
