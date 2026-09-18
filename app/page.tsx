@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
 
@@ -31,12 +30,12 @@ export default function Home() {
               enters the room.
             </p>
             <div className="hero-actions">
-              <Link className="button button-dark" href="/agenda">
+              <a className="button button-dark" href="/agenda">
                 Explore the agenda <span>↗</span>
-              </Link>
-              <Link className="button" href="/ctf">
+              </a>
+              <a className="button" href="/ctf">
                 Enter the CTF <span>↗</span>
-              </Link>
+              </a>
             </div>
             <div className="hero-note">
               <p className="fine">
@@ -99,9 +98,9 @@ export default function Home() {
                 students into the same room for practical ideas, honest
                 conversations and a CTF that turns knowledge into action.
               </p>
-              <Link className="text-link" href="/agenda">
+              <a className="text-link" href="/agenda">
                 See how the event unfolds <span>↗</span>
-              </Link>
+              </a>
             </div>
           </div>
         </section>
@@ -151,9 +150,9 @@ export default function Home() {
               </div>
             </div>
             <div style={{ marginTop: 34 }}>
-              <Link href="/agenda" className="button button-light">
+              <a href="/agenda" className="button button-light">
                 View agenda structure <span>↗</span>
-              </Link>
+              </a>
             </div>
           </div>
         </section>
@@ -172,9 +171,9 @@ export default function Home() {
               <span>Reverse engineering</span>
               <span>OSINT</span>
             </div>
-            <Link className="button button-lime" href="/ctf">
+            <a className="button button-lime" href="/ctf">
               Explore the competition <span>↗</span>
-            </Link>
+            </a>
           </div>
           <div className="ctf-photo photo">
             <Image
@@ -200,9 +199,9 @@ export default function Home() {
                 People came to listen, compete, meet and ask when we would do it
                 again.
               </p>
-              <Link className="text-link" href="/edition-2026">
+              <a className="text-link" href="/edition-2026">
                 Explore the full recap <span>↗</span>
-              </Link>
+              </a>
             </div>
             <div className="metrics">
               <div className="metric">
@@ -321,9 +320,9 @@ export default function Home() {
           <div className="container">
             <div className="partners-heading">
               <p className="eyebrow">Edition #1 partners</p>
-              <Link href="/partners" className="text-link">
+              <a href="/partners" className="text-link">
                 Partner with Edition #2 <span>↗</span>
-              </Link>
+              </a>
             </div>
             <div className="partner-logos">
               {logos.map(([src, alt]) => (
@@ -344,9 +343,9 @@ export default function Home() {
               >
                 Join the community <span>↗</span>
               </a>
-              <Link href="/contact" className="button button-light">
+              <a href="/contact" className="button button-light">
                 Stay in touch <span>↗</span>
-              </Link>
+              </a>
             </div>
           </div>
         </section>

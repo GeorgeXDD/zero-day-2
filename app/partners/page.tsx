@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import Link from 'next/link';
 import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
 
@@ -138,9 +137,9 @@ export default function PartnersPage() {
               <br />
               edition with us.
             </h2>
-            <Link href="/contact" className="button button-lime">
+            <a href="/contact" className="button button-lime">
               Start a conversation <span>↗</span>
-            </Link>
+            </a>
           </div>
         </section>
       </main>

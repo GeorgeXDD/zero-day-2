@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 export function SiteFooter() {
   return (
     <footer className="site-footer">
@@ -22,7 +20,7 @@ export function SiteFooter() {
           </div>
         </div>
         <div className="footer-bottom">
-          <Link href="/">ZeroDayTM</Link>
+          <a href="/">ZeroDayTM</a>
           <div className="footer-socials">
             <a
               href="https://www.instagram.com/zerodaytm/"

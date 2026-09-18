@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import Link from 'next/link';
 import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
 
@@ -167,9 +166,9 @@ export default function CtfPage() {
               >
                 Follow CTF updates <span>↗</span>
               </a>
-              <Link href="/agenda" className="button button-light">
+              <a href="/agenda" className="button button-light">
                 View event agenda <span>↗</span>
-              </Link>
+              </a>
             </div>
           </div>
         </section>

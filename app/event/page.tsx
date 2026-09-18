@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import Link from 'next/link';
 import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
 
@@ -92,9 +91,9 @@ export default function EventPage() {
               Edition #1 proved that the community was already here. Edition #2
               gives it more room, more time and more ways to participate.
             </p>
-            <Link href="/edition-2026" className="button button-lime">
+            <a href="/edition-2026" className="button button-lime">
               See what happened in 2026 <span>↗</span>
-            </Link>
+            </a>
           </div>
         </section>
       </main>

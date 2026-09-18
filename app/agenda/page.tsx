@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
 
@@ -219,9 +218,9 @@ export default function AgendaPage() {
               </article>
             </div>
             <div style={{ marginTop: 44 }}>
-              <Link href="/contact" className="button button-dark">
+              <a href="/contact" className="button button-dark">
                 Ask about the programme <span>↗</span>
-              </Link>
+              </a>
             </div>
           </div>
         </section>

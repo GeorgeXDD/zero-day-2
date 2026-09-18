@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 
 const links = [
   ['Home', '/'],
@@ -14,7 +13,7 @@ export function SiteHeader({ dark = false }: { dark?: boolean }) {
   return (
     <header className={`site-header ${dark ? 'on-dark' : ''}`}>
       <div className="container nav">
-        <Link href="/" className="logo" aria-label="ZeroDayTM home">
+        <a href="/" className="logo" aria-label="ZeroDayTM home">
           <Image
             src="/logos/zeroday-logo-white.png"
             alt="ZeroDayTM"
@@ -22,12 +21,12 @@ export function SiteHeader({ dark = false }: { dark?: boolean }) {
             height={50}
             priority
           />
-        </Link>
+        </a>
         <nav className="desktop-nav" aria-label="Main navigation">
           {links.map(([label, href]) => (
-            <Link key={href} href={href}>
+            <a key={href} href={href}>
               {label}
-            </Link>
+            </a>
           ))}
         </nav>
         <a
@@ -42,9 +41,9 @@ export function SiteHeader({ dark = false }: { dark?: boolean }) {
           <summary>Menu</summary>
           <div className="menu-panel">
             {links.map(([label, href]) => (
-              <Link key={href} href={href}>
+              <a key={href} href={href}>
                 {label}
-              </Link>
+              </a>
             ))}
           </div>
         </details>
