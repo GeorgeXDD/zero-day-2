@@ -207,7 +207,7 @@ export default function AgendaPage() {
                 </div>
               </article>
               <article className="fact">
-                <strong className="display">+Web</strong>
+                <strong className="display">Web</strong>
                 <div>
                   <h3>Online CTF</h3>
                   <p>

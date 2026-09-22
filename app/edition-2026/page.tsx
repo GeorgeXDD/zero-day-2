@@ -125,9 +125,9 @@ export default function RecapPage() {
           <div className="container">
             <p className="eyebrow">The response</p>
             <h2 className="display section-title">
-              The room asked
+              The people asked
               <br />
-              for another room.
+              for a second edition.
             </h2>
             <div className="voice-grid">
               <article className="voice">

@@ -343,6 +343,14 @@ export default function Home() {
               >
                 Join the community <span>↗</span>
               </a>
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLScsqzlr9JUBYCRAN6q7_Vfu7iNi46Nju_RlLBE0az7bOA7FKA/viewform?usp=publish-editor"
+                target="_blank"
+                rel="noreferrer"
+                className="button button-light"
+              >
+                Join as a Volunteer <span>↗</span>
+              </a>
               <a href="/contact" className="button button-light">
                 Stay in touch <span>↗</span>
               </a>
