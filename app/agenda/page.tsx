@@ -157,17 +157,17 @@ export default function AgendaPage() {
   return (
     <>
       <SiteHeader dark />
-      <main className="min-h-screen bg-[#040002] text-white">
+      <main className="min-h-screen bg-transparent text-white">
         {/* ========================================================
-            HERO SECTION (Hybrid of Screenshot 2 + Cyberpunk Blackwall)
+            HERO SECTION (Hybrid of Screenshot 2 + Vice City Neon)
             ======================================================== */}
-        <section className="relative isolate pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden border-b border-[#ff003c]/25 bg-[#080104]">
-          {/* Ambient Blackwall Net & Horizon Lighting */}
+        <section className="relative isolate pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden border-b border-[#ff2a85]/25 bg-[#0b0318]/60 backdrop-blur-sm">
+          {/* Ambient Vice City Net & Horizon Lighting */}
           <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_10%,rgba(255,0,60,0.18),transparent_45%),radial-gradient(circle_at_80%_80%,rgba(255,42,85,0.12),transparent_40%)]" />
-            <div className="absolute inset-0 opacity-[0.1] blackwall-grid" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_10%,rgba(255,42,133,0.22),transparent_48%),radial-gradient(circle_at_80%_80%,rgba(0,240,255,0.18),transparent_42%)]" />
+            <div className="absolute inset-0 opacity-[0.12] vice-grid" />
             {/* Blazing Incandescent Horizontal Horizon Flare Line */}
-            <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#ff003c] via-white to-transparent opacity-90 shadow-[0_0_35px_rgba(255,0,60,0.9),0_0_70px_rgba(255,42,85,0.6)]" />
+            <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#ff2a85] via-[#00f0ff] to-transparent opacity-90 shadow-[0_0_35px_rgba(255,42,133,0.9),0_0_70px_rgba(0,240,255,0.6)]" />
           </div>
 
           <div className="container relative z-10 mx-auto px-4 md:px-8">
@@ -175,10 +175,10 @@ export default function AgendaPage() {
               {/* Left Column: Index & Giant Display Title */}
               <div className="lg:col-span-8 space-y-4">
                 <div className="flex items-center gap-3">
-                  <span className="font-mono text-xs uppercase tracking-[0.25em] text-[#ff003c] font-bold">
+                  <span className="font-mono text-xs uppercase tracking-[0.25em] text-[#00f0ff] font-bold text-glow-cyan">
                     01 / Agenda
                   </span>
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#ff003c] animate-ping" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#00f0ff] animate-ping" />
                   <span className="font-mono text-[10px] text-white/50 uppercase tracking-widest hidden sm:inline">
                     {`// PROTOCOL: ARCHITECTURE_PREVIEW`}
                   </span>
@@ -187,7 +187,7 @@ export default function AgendaPage() {
                 <h1 className="display text-5xl sm:text-7xl md:text-8xl lg:text-[7.5rem] font-black uppercase tracking-tight text-white leading-[0.92]">
                   How the days
                   <br />
-                  <span className="text-[#ff003c] text-glow-red">
+                  <span className="text-[#ff2a85] text-glow-pink">
                     take shape.
                   </span>
                 </h1>
@@ -200,12 +200,12 @@ export default function AgendaPage() {
                   conversations.
                 </p>
 
-                <div className="p-4 rounded-xl border border-[#ff003c]/30 bg-[#0e0206]/90 backdrop-blur-md space-y-2">
+                <div className="p-4 rounded-xl border border-[#ff2a85]/30 bg-[#120524]/90 backdrop-blur-md space-y-2">
                   <div className="flex items-center justify-between text-[11px] font-mono uppercase tracking-wider">
                     <span className="text-white/60">Programme Status</span>
-                    <span className="text-[#ff003c] font-bold">CONFIRMED FORMAT</span>
+                    <span className="text-[#00f0ff] font-bold">CONFIRMED FORMAT</span>
                   </div>
-                  <div className="pt-1 border-t border-white/10 font-mono text-[11px] text-[#c9aeb5] leading-relaxed">
+                  <div className="pt-1 border-t border-white/10 font-mono text-[11px] text-[#a89fc0] leading-relaxed">
                     <span className="text-white font-bold block">Edition #2 · Spring 2027</span>
                     Final timetable to be announced as speakers are locked.
                   </div>
@@ -227,8 +227,8 @@ export default function AgendaPage() {
                     onClick={() => setActiveFilter(tab.id)}
                     className={`font-mono text-xs uppercase tracking-wider px-4 py-2.5 rounded-lg border transition-all flex items-center gap-2 ${
                       activeFilter === tab.id
-                        ? 'border-[#ff003c] bg-[#ff003c] text-white font-bold shadow-[0_0_20px_rgba(255,0,60,0.5)]'
-                        : 'border-[#ff003c]/25 bg-[#0e0206]/60 text-white/70 hover:border-[#ff003c]/60 hover:text-white'
+                        ? 'border-[#ff2a85] bg-[#ff2a85] text-white font-bold shadow-[0_0_20px_rgba(255,42,133,0.55)]'
+                        : 'border-[#ff2a85]/25 bg-[#120524]/60 text-white/70 hover:border-[#00f0ff]/60 hover:text-white'
                     }`}
                   >
                     <span>{tab.label}</span>
@@ -246,7 +246,7 @@ export default function AgendaPage() {
               </div>
 
               <div className="hidden xl:flex items-center gap-2 text-xs font-mono text-white/50">
-                <Terminal size={14} className="text-[#ff003c]" />
+                <Terminal size={14} className="text-[#00f0ff]" />
                 <span>SYS_MODE: 0x2027_CONFIRMED · PENDING_HOURLY_LOCK</span>
               </div>
             </div>
@@ -254,14 +254,14 @@ export default function AgendaPage() {
         </section>
 
         {/* ========================================================
-            DAY 01: CONFERENCE DAY (Hybrid Section 1)
+            DAY 01: CONFERENCE DAY (Hybrid Section 1 - Neon Pink)
             ======================================================== */}
         {(activeFilter === 'all' || activeFilter === 'day1') && (
-          <section className="relative py-20 md:py-28 border-b border-[#ff003c]/20 bg-[#040002] overflow-hidden isolate">
+          <section className="relative py-20 md:py-28 border-b border-[#ff2a85]/20 bg-[#07020d] overflow-hidden isolate">
             {/* Background Ambience */}
             <div className="absolute inset-0 pointer-events-none">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_30%,rgba(255,0,60,0.08),transparent_50%)]" />
-              <div className="absolute inset-0 opacity-[0.05] blackwall-grid" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_30%,rgba(255,42,133,0.12),transparent_50%)]" />
+              <div className="absolute inset-0 opacity-[0.08] vice-grid" />
             </div>
 
             <div className="container relative z-10 mx-auto px-4 md:px-8">
@@ -269,13 +269,13 @@ export default function AgendaPage() {
                 {/* Left Column: Day 01 Aside (Editorial Style from Screenshot 2) */}
                 <aside className="lg:col-span-4 space-y-6 lg:sticky lg:top-28">
                   <div className="space-y-3">
-                    <p className="eyebrow !text-[#ff003c] text-[#ff003c] font-mono text-xs uppercase tracking-widest font-bold">
+                    <p className="eyebrow !text-[#ff2a85] text-[#ff2a85] font-mono text-xs uppercase tracking-widest font-bold text-glow-pink">
                       Day 01
                     </p>
                     <h2 className="display text-5xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight text-white leading-[0.94]">
                       Conference
                       <br />
-                      <span className="text-[#ff003c] text-glow-red">
+                      <span className="text-[#ff2a85] text-glow-pink">
                         day.
                       </span>
                     </h2>
@@ -288,18 +288,18 @@ export default function AgendaPage() {
 
                   {/* Metadata Chips Stack */}
                   <div className="pt-2 space-y-2.5 font-mono text-xs">
-                    <div className="flex items-center gap-2.5 p-3 rounded-xl border border-white/10 bg-[#0e0206]/80 text-white/70">
-                      <MapPin size={15} className="text-[#ff003c] shrink-0" />
+                    <div className="flex items-center gap-2.5 p-3 rounded-xl border border-white/10 bg-[#120524]/80 text-white/70">
+                      <MapPin size={15} className="text-[#ff2a85] shrink-0" />
                       <span>ICAM Auditorium Magna & Atrium</span>
                     </div>
 
-                    <div className="flex items-center gap-2.5 p-3 rounded-xl border border-[#ffaa00]/30 bg-[#ffaa00]/10 text-white/85">
-                      <ShieldCheck size={15} className="text-[#ffaa00] shrink-0" />
+                    <div className="flex items-center gap-2.5 p-3 rounded-xl border border-[#ff7a00]/30 bg-[#ff7a00]/10 text-white/85">
+                      <ShieldCheck size={15} className="text-[#ff7a00] shrink-0" />
                       <span>Up to 5 CPE Hours Accredited by ISACA</span>
                     </div>
 
-                    <div className="flex items-center gap-2.5 p-3 rounded-xl border border-white/10 bg-[#0e0206]/80 text-white/70">
-                      <Mic2 size={15} className="text-[#ff003c] shrink-0" />
+                    <div className="flex items-center gap-2.5 p-3 rounded-xl border border-white/10 bg-[#120524]/80 text-white/70">
+                      <Mic2 size={15} className="text-[#00f0ff] shrink-0" />
                       <span>Keynotes · Technical Talks · Active Panels</span>
                     </div>
                   </div>
@@ -314,7 +314,7 @@ export default function AgendaPage() {
                   </div>
 
                   {/* Cyber Hybrid Milestones Flow */}
-                  <div className="relative pl-6 sm:pl-8 space-y-4 before:absolute before:left-2 sm:before:left-3 before:top-4 before:bottom-4 before:w-[2px] before:bg-gradient-to-b before:from-[#ff003c] before:via-[#ff2a55] before:to-[#ff003c]/20">
+                  <div className="relative pl-6 sm:pl-8 space-y-4 before:absolute before:left-2 sm:before:left-3 before:top-4 before:bottom-4 before:w-[2px] before:bg-gradient-to-b before:from-[#ff2a85] before:via-[#9d4edd] before:to-[#ff2a85]/20">
                     {day1Milestones.map((item) => {
                       const isExpanded = expandedItem === item.id;
                       return (
@@ -322,16 +322,16 @@ export default function AgendaPage() {
                           key={item.id}
                           className={`relative rounded-2xl border transition-all duration-200 p-5 sm:p-6 ${
                             isExpanded
-                              ? 'border-[#ff003c] bg-[#120207] shadow-[0_0_30px_rgba(255,0,60,0.25)]'
-                              : 'border-[#ff003c]/25 bg-[#0a0104]/85 hover:border-[#ff003c]/50 hover:bg-[#0e0206]'
+                              ? 'border-[#ff2a85] bg-[#1a0528] shadow-[0_0_30px_rgba(255,42,133,0.25)]'
+                              : 'border-[#ff2a85]/25 bg-[#100422]/85 hover:border-[#ff2a85]/50 hover:bg-[#15062c]'
                           }`}
                         >
                           {/* Glowing Spine Dot */}
                           <span
                             className={`absolute -left-[27px] sm:-left-[35px] top-7 h-4 w-4 rounded-full border-2 transition-all ${
                               isExpanded
-                                ? 'border-[#ff003c] bg-white shadow-[0_0_15px_#ff003c]'
-                                : 'border-[#ff003c] bg-[#040002] shadow-[0_0_8px_rgba(255,0,60,0.6)]'
+                                ? 'border-[#ff2a85] bg-white shadow-[0_0_15px_#ff2a85]'
+                                : 'border-[#ff2a85] bg-[#07020d] shadow-[0_0_8px_rgba(255,42,133,0.6)]'
                             }`}
                           />
 
@@ -344,13 +344,13 @@ export default function AgendaPage() {
                               {/* Main Content */}
                               <div className="space-y-2 flex-1">
                                 <div className="flex flex-wrap items-center gap-3">
-                                  <time className="font-mono font-bold text-xs uppercase tracking-wider text-[#ff003c]">
+                                  <time className="font-mono font-bold text-xs uppercase tracking-wider text-[#ff2a85]">
                                     {item.timeSlot}
                                   </time>
-                                  <span className="font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 rounded border border-[#ff003c]/30 bg-[#ff003c]/10 text-white/90">
+                                  <span className="font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 rounded border border-[#ff2a85]/30 bg-[#ff2a85]/15 text-white/90">
                                     {item.tag}
                                   </span>
-                                  <span className="font-mono text-[10px] text-white/40">
+                                  <span className="font-mono text-[10px] text-[#00f0ff]">
                                     {item.statusCode}
                                   </span>
                                 </div>
@@ -359,14 +359,14 @@ export default function AgendaPage() {
                                   {item.title}
                                 </h3>
 
-                                <p className="text-sm sm:text-base text-[#c9aeb5] leading-relaxed font-body">
+                                <p className="text-sm sm:text-base text-[#a89fc0] leading-relaxed font-body">
                                   {item.description}
                                 </p>
                               </div>
 
                               {/* Item Index Number & Action */}
                               <div className="flex sm:flex-col items-center justify-between sm:items-end gap-2 shrink-0">
-                                <span className="font-mono text-xl sm:text-2xl font-black text-[#ff003c] text-glow-red">
+                                <span className="font-mono text-xl sm:text-2xl font-black text-[#ff2a85] text-glow-pink">
                                   {item.num}
                                 </span>
                                 <span className="text-xs font-mono text-white/40 flex items-center gap-1 group-hover:text-white transition-colors">
@@ -389,7 +389,7 @@ export default function AgendaPage() {
                               </div>
                               <div className="p-3 rounded-lg bg-black/40 border border-white/5">
                                 <span className="text-white/40 block text-[10px] uppercase">Telemetry Protocol</span>
-                                <span className="text-[#ff003c] font-bold">{item.trackCode}</span>
+                                <span className="text-[#00f0ff] font-bold">{item.trackCode}</span>
                               </div>
                             </div>
                           )}
@@ -413,14 +413,14 @@ export default function AgendaPage() {
         )}
 
         {/* ========================================================
-            DAY 02: CTF DAY (Hybrid Section 2)
+            DAY 02: CTF DAY (Hybrid Section 2 - Electric Cyan)
             ======================================================== */}
         {(activeFilter === 'all' || activeFilter === 'day2') && (
-          <section className="relative py-20 md:py-28 border-b border-[#ff003c]/20 bg-[#060103] overflow-hidden isolate">
+          <section className="relative py-20 md:py-28 border-b border-[#00f0ff]/20 bg-[#050b18] overflow-hidden isolate">
             {/* Background Ambience */}
             <div className="absolute inset-0 pointer-events-none">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_90%_30%,rgba(255,42,85,0.1),transparent_50%)]" />
-              <div className="absolute inset-0 opacity-[0.05] blackwall-grid" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_90%_30%,rgba(0,240,255,0.14),transparent_50%)]" />
+              <div className="absolute inset-0 opacity-[0.08] vice-grid" />
             </div>
 
             <div className="container relative z-10 mx-auto px-4 md:px-8">
@@ -428,13 +428,13 @@ export default function AgendaPage() {
                 {/* Left Column: Day 02 Aside (Editorial Style from Screenshot 2) */}
                 <aside className="lg:col-span-4 space-y-6 lg:sticky lg:top-28">
                   <div className="space-y-3">
-                    <p className="eyebrow !text-[#ff2a55] text-[#ff2a55] font-mono text-xs uppercase tracking-widest font-bold">
+                    <p className="eyebrow !text-[#00f0ff] text-[#00f0ff] font-mono text-xs uppercase tracking-widest font-bold text-glow-cyan">
                       Day 02
                     </p>
                     <h2 className="display text-5xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight text-white leading-[0.94]">
                       CTF
                       <br />
-                      <span className="text-[#ff2a55] text-glow-flare">
+                      <span className="text-[#00f0ff] text-glow-cyan">
                         day.
                       </span>
                     </h2>
@@ -447,18 +447,18 @@ export default function AgendaPage() {
 
                   {/* CTF Specs Badges */}
                   <div className="pt-2 space-y-2.5 font-mono text-xs">
-                    <div className="flex items-center gap-2.5 p-3 rounded-xl border border-[#ff2a55]/30 bg-[#ff2a55]/10 text-white">
-                      <Trophy size={15} className="text-[#ff2a55] shrink-0" />
+                    <div className="flex items-center gap-2.5 p-3 rounded-xl border border-[#ff7a00]/30 bg-[#ff7a00]/10 text-white">
+                      <Trophy size={15} className="text-[#ff7a00] shrink-0" />
                       <span>4,000€ Prize Pool · Top Trophy & Cash</span>
                     </div>
 
-                    <div className="flex items-center gap-2.5 p-3 rounded-xl border border-white/10 bg-[#0e0206]/80 text-white/70">
-                      <Clock size={15} className="text-[#ff2a55] shrink-0" />
+                    <div className="flex items-center gap-2.5 p-3 rounded-xl border border-white/10 bg-[#091428]/80 text-white/70">
+                      <Clock size={15} className="text-[#00f0ff] shrink-0" />
                       <span>8 Hours Non-stop Jeopardy Matrix</span>
                     </div>
 
-                    <div className="flex items-center gap-2.5 p-3 rounded-xl border border-white/10 bg-[#0e0206]/80 text-white/70">
-                      <Cpu size={15} className="text-[#ff2a55] shrink-0" />
+                    <div className="flex items-center gap-2.5 p-3 rounded-xl border border-white/10 bg-[#091428]/80 text-white/70">
+                      <Cpu size={15} className="text-[#00f0ff] shrink-0" />
                       <span>Web · Crypto · Forensics · Reverse · OSINT</span>
                     </div>
                   </div>
@@ -466,14 +466,15 @@ export default function AgendaPage() {
 
                 {/* Right Column: Day Switch + Milestones List (Screenshot 2 + Cyber Trace Spine) */}
                 <div className="lg:col-span-8 space-y-6">
-                  {/* Day Switch Pill with Blackwall styling */}
+                  {/* Day Switch Pill with Vice City styling */}
                   <div className="day-switch">
                     <span
                       style={{
-                        background: '#ff2a55',
-                        color: '#ffffff',
-                        borderColor: '#ff2a55',
-                        boxShadow: '0 0 16px rgba(255,42,85,0.5)',
+                        background: '#00f0ff',
+                        color: '#07020d',
+                        borderColor: '#00f0ff',
+                        fontWeight: 'bold',
+                        boxShadow: '0 0 16px rgba(0,240,255,0.6)',
                       }}
                     >
                       Day 02 / Competition
@@ -482,7 +483,7 @@ export default function AgendaPage() {
                   </div>
 
                   {/* Cyber Hybrid Milestones Flow */}
-                  <div className="relative pl-6 sm:pl-8 space-y-4 before:absolute before:left-2 sm:before:left-3 before:top-4 before:bottom-4 before:w-[2px] before:bg-gradient-to-b before:from-[#ff2a55] before:via-[#ff003c] before:to-[#ff2a55]/20">
+                  <div className="relative pl-6 sm:pl-8 space-y-4 before:absolute before:left-2 sm:before:left-3 before:top-4 before:bottom-4 before:w-[2px] before:bg-gradient-to-b before:from-[#00f0ff] before:via-[#9d4edd] before:to-[#00f0ff]/20">
                     {day2Milestones.map((item) => {
                       const isExpanded = expandedItem === item.id;
                       return (
@@ -490,16 +491,16 @@ export default function AgendaPage() {
                           key={item.id}
                           className={`relative rounded-2xl border transition-all duration-200 p-5 sm:p-6 ${
                             isExpanded
-                              ? 'border-[#ff2a55] bg-[#160207] shadow-[0_0_30px_rgba(255,42,85,0.25)]'
-                              : 'border-[#ff2a55]/25 bg-[#0a0104]/85 hover:border-[#ff2a55]/50 hover:bg-[#0e0206]'
+                              ? 'border-[#00f0ff] bg-[#0c2242] shadow-[0_0_30px_rgba(0,240,255,0.25)]'
+                              : 'border-[#00f0ff]/25 bg-[#08152c]/85 hover:border-[#00f0ff]/50 hover:bg-[#0c1e3c]'
                           }`}
                         >
                           {/* Glowing Spine Dot */}
                           <span
                             className={`absolute -left-[27px] sm:-left-[35px] top-7 h-4 w-4 rounded-full border-2 transition-all ${
                               isExpanded
-                                ? 'border-[#ff2a55] bg-white shadow-[0_0_15px_#ff2a55]'
-                                : 'border-[#ff2a55] bg-[#040002] shadow-[0_0_8px_rgba(255,42,85,0.6)]'
+                                ? 'border-[#00f0ff] bg-white shadow-[0_0_15px_#00f0ff]'
+                                : 'border-[#00f0ff] bg-[#050b18] shadow-[0_0_8px_rgba(0,240,255,0.6)]'
                             }`}
                           />
 
@@ -512,13 +513,13 @@ export default function AgendaPage() {
                               {/* Main Content */}
                               <div className="space-y-2 flex-1">
                                 <div className="flex flex-wrap items-center gap-3">
-                                  <time className="font-mono font-bold text-xs uppercase tracking-wider text-[#ff2a55]">
+                                  <time className="font-mono font-bold text-xs uppercase tracking-wider text-[#00f0ff]">
                                     {item.timeSlot}
                                   </time>
-                                  <span className="font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 rounded border border-[#ff2a55]/30 bg-[#ff2a55]/10 text-white/90">
+                                  <span className="font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 rounded border border-[#00f0ff]/30 bg-[#00f0ff]/15 text-white/90">
                                     {item.tag}
                                   </span>
-                                  <span className="font-mono text-[10px] text-white/40">
+                                  <span className="font-mono text-[10px] text-[#ff2a85]">
                                     {item.statusCode}
                                   </span>
                                 </div>
@@ -527,14 +528,14 @@ export default function AgendaPage() {
                                   {item.title}
                                 </h3>
 
-                                <p className="text-sm sm:text-base text-[#c9aeb5] leading-relaxed font-body">
+                                <p className="text-sm sm:text-base text-[#a89fc0] leading-relaxed font-body">
                                   {item.description}
                                 </p>
                               </div>
 
                               {/* Item Index Number & Action */}
                               <div className="flex sm:flex-col items-center justify-between sm:items-end gap-2 shrink-0">
-                                <span className="font-mono text-xl sm:text-2xl font-black text-[#ff2a55] text-glow-flare">
+                                <span className="font-mono text-xl sm:text-2xl font-black text-[#00f0ff] text-glow-cyan">
                                   {item.num}
                                 </span>
                                 <span className="text-xs font-mono text-white/40 flex items-center gap-1 group-hover:text-white transition-colors">
@@ -557,7 +558,7 @@ export default function AgendaPage() {
                               </div>
                               <div className="p-3 rounded-lg bg-black/40 border border-white/5">
                                 <span className="text-white/40 block text-[10px] uppercase">Game Protocol</span>
-                                <span className="text-[#ff2a55] font-bold">{item.trackCode}</span>
+                                <span className="text-[#00f0ff] font-bold">{item.trackCode}</span>
                               </div>
                             </div>
                           )}
@@ -566,15 +567,15 @@ export default function AgendaPage() {
                     })}
                   </div>
 
-                  {/* CTF Format Notice Box (Exact Copy from Screenshot 2) */}
+                  {/* CTF Format Notice Box */}
                   <div
                     className="notice"
                     style={{
-                      background: 'rgba(255, 42, 85, 0.08)',
-                      borderColor: '#ff2a55',
+                      background: 'rgba(0, 240, 255, 0.08)',
+                      borderColor: '#00f0ff',
                     }}
                   >
-                    <p className="fine" style={{ color: '#e5c9d0' }}>
+                    <p className="fine" style={{ color: '#d0f8ff' }}>
                       The CTF is confirmed for Edition #2. Duration, challenge list,
                       online participation and registration details are still being
                       finalized.
@@ -587,72 +588,72 @@ export default function AgendaPage() {
         )}
 
         {/* ========================================================
-            A POSSIBLE THIRD LAYER (Screenshot 2 + Cyber Cards)
+            A POSSIBLE THIRD LAYER (Screenshot 2 + Vice City Cards)
             ======================================================== */}
         {(activeFilter === 'all' || activeFilter === 'layer3') && (
-          <section className="relative py-24 md:py-32 bg-[#040002] border-t border-[#ff003c]/25 overflow-hidden isolate">
+          <section className="relative py-24 md:py-32 bg-[#07020d] border-t border-[#ff2a85]/25 overflow-hidden isolate">
             <div className="container relative z-10 mx-auto px-4 md:px-8">
               <div className="max-w-3xl">
-                <p className="eyebrow !text-[#ff003c] text-[#ff003c] font-mono text-xs uppercase tracking-widest font-bold">
+                <p className="eyebrow !text-[#00f0ff] text-[#00f0ff] font-mono text-xs uppercase tracking-widest font-bold text-glow-cyan">
                   Still being explored
                 </p>
                 <h2 className="display text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-tight text-white mt-2">
                   A possible
                   <br />
-                  <span className="text-[#ff003c] text-glow-red">third layer.</span>
+                  <span className="text-[#ff2a85] text-glow-pink">third layer.</span>
                 </h2>
               </div>
 
               {/* 3 Fact Cards Grid from Screenshot 2 */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-14">
-                <article className="p-8 rounded-2xl border border-[#ff003c]/25 bg-[#0e0206]/85 backdrop-blur-xl flex flex-col justify-between min-h-[300px] transition-all hover:border-[#ff003c]/60 hover:shadow-[0_0_30px_rgba(255,0,60,0.15)] group">
+                <article className="p-8 rounded-2xl border border-[#ff2a85]/25 bg-[#100422]/85 backdrop-blur-xl flex flex-col justify-between min-h-[300px] transition-all hover:border-[#ff2a85]/60 hover:shadow-[0_0_30px_rgba(255,42,133,0.2)] group">
                   <div className="flex items-center justify-between">
-                    <strong className="display text-4xl sm:text-5xl font-black text-[#ff003c] text-glow-red">
+                    <strong className="display text-4xl sm:text-5xl font-black text-[#ff2a85] text-glow-pink">
                       Labs
                     </strong>
-                    <Code2 className="text-[#ff003c]/60 group-hover:text-[#ff003c] transition-colors" size={24} />
+                    <Code2 className="text-[#ff2a85]/60 group-hover:text-[#ff2a85] transition-colors" size={24} />
                   </div>
                   <div>
                     <h3 className="font-mono font-bold text-lg text-white uppercase mb-2">
                       Hands-on sessions
                     </h3>
-                    <p className="text-xs sm:text-sm text-[#c9aeb5] font-body leading-relaxed">
+                    <p className="text-xs sm:text-sm text-[#a89fc0] font-body leading-relaxed">
                       Small, practical learning formats if the right trainers,
                       space and partners come together.
                     </p>
                   </div>
                 </article>
 
-                <article className="p-8 rounded-2xl border border-[#ff003c]/25 bg-[#0e0206]/85 backdrop-blur-xl flex flex-col justify-between min-h-[300px] transition-all hover:border-[#ff003c]/60 hover:shadow-[0_0_30px_rgba(255,0,60,0.15)] group">
+                <article className="p-8 rounded-2xl border border-[#00f0ff]/25 bg-[#09152a]/85 backdrop-blur-xl flex flex-col justify-between min-h-[300px] transition-all hover:border-[#00f0ff]/60 hover:shadow-[0_0_30px_rgba(0,240,255,0.2)] group">
                   <div className="flex items-center justify-between">
-                    <strong className="display text-4xl sm:text-5xl font-black text-[#ff2a55] text-glow-flare">
+                    <strong className="display text-4xl sm:text-5xl font-black text-[#00f0ff] text-glow-cyan">
                       Live
                     </strong>
-                    <Radio className="text-[#ff2a55]/60 group-hover:text-[#ff2a55] transition-colors" size={24} />
+                    <Radio className="text-[#00f0ff]/60 group-hover:text-[#00f0ff] transition-colors" size={24} />
                   </div>
                   <div>
                     <h3 className="font-mono font-bold text-lg text-white uppercase mb-2">
                       Online stream
                     </h3>
-                    <p className="text-xs sm:text-sm text-[#c9aeb5] font-body leading-relaxed">
+                    <p className="text-xs sm:text-sm text-[#a89fc0] font-body leading-relaxed">
                       Extending the conference beyond the physical room in
                       Timișoara with live streaming infrastructure.
                     </p>
                   </div>
                 </article>
 
-                <article className="p-8 rounded-2xl border border-[#ff003c]/25 bg-[#0e0206]/85 backdrop-blur-xl flex flex-col justify-between min-h-[300px] transition-all hover:border-[#ff003c]/60 hover:shadow-[0_0_30px_rgba(255,0,60,0.15)] group">
+                <article className="p-8 rounded-2xl border border-[#9d4edd]/25 bg-[#14062a]/85 backdrop-blur-xl flex flex-col justify-between min-h-[300px] transition-all hover:border-[#9d4edd]/60 hover:shadow-[0_0_30px_rgba(157,78,221,0.2)] group">
                   <div className="flex items-center justify-between">
-                    <strong className="display text-4xl sm:text-5xl font-black text-white">
+                    <strong className="display text-4xl sm:text-5xl font-black text-[#9d4edd] text-glow-purple">
                       Web
                     </strong>
-                    <Sparkles className="text-white/60 group-hover:text-white transition-colors" size={24} />
+                    <Sparkles className="text-[#9d4edd]/60 group-hover:text-[#9d4edd] transition-colors" size={24} />
                   </div>
                   <div>
                     <h3 className="font-mono font-bold text-lg text-white uppercase mb-2">
                       Online CTF
                     </h3>
-                    <p className="text-xs sm:text-sm text-[#c9aeb5] font-body leading-relaxed">
+                    <p className="text-xs sm:text-sm text-[#a89fc0] font-body leading-relaxed">
                       Opening selected competition participation beyond the venue,
                       if the format supports it.
                     </p>
@@ -664,7 +665,7 @@ export default function AgendaPage() {
               <div className="mt-12 flex flex-wrap items-center gap-4">
                 <a
                   href="/contact"
-                  className="inline-flex items-center gap-2.5 rounded-xl border border-[#ff003c] bg-[#ff003c] px-6 py-3.5 font-mono text-xs font-bold uppercase tracking-[0.16em] text-white shadow-[0_0_24px_rgba(255,0,60,0.45)] transition-all hover:-translate-y-0.5 hover:bg-[#ff1a4f] hover:shadow-[0_0_36px_rgba(255,0,60,0.65)]"
+                  className="inline-flex items-center gap-2.5 rounded-xl border border-[#ff2a85] bg-[#ff2a85] px-6 py-3.5 font-mono text-xs font-bold uppercase tracking-[0.16em] text-white shadow-[0_0_24px_rgba(255,42,133,0.5)] transition-all hover:-translate-y-0.5 hover:bg-[#ff007f] hover:shadow-[0_0_36px_rgba(255,42,133,0.7)]"
                 >
                   Ask about the programme
                   <ArrowUpRight size={14} />
@@ -672,7 +673,7 @@ export default function AgendaPage() {
 
                 <a
                   href="/ctf"
-                  className="inline-flex items-center gap-2.5 rounded-xl border border-white/20 bg-white/5 px-6 py-3.5 font-mono text-xs font-bold uppercase tracking-[0.16em] text-white hover:border-[#ff003c] hover:bg-[#180207] transition-all hover:-translate-y-0.5"
+                  className="inline-flex items-center gap-2.5 rounded-xl border border-[#00f0ff]/50 bg-[#00f0ff]/10 px-6 py-3.5 font-mono text-xs font-bold uppercase tracking-[0.16em] text-[#00f0ff] hover:bg-[#00f0ff]/20 transition-all hover:-translate-y-0.5"
                 >
                   Explore CTF Track ↗
                 </a>

@@ -2,16 +2,28 @@
 
 :root {
   --ink: #ffffff;
-  --paper: #040002;
-  --paper-2: #080104;
-  --lime: #ff003c;
-  --green: #ff003c;
-  --purple: #ff2a55;
-  --muted: #bda2aa;
-  --line: rgba(255, 0, 60, 0.22);
+  --paper: #07020d;
+  --paper-2: #0e051c;
+  --lime: #00f0ff;
+  --green: #00f0ff;
+  --purple: #ff2a85;
+  --muted: #a89fc0;
+  --line: rgba(255, 42, 133, 0.22);
   --font-display: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   --font-body: Arial, Helvetica, sans-serif;
   --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+
+  /* Vice City Core Tokens */
+  --vice-bg: #07020d;
+  --vice-surface: #0e051c;
+  --vice-card: #15092b;
+  --vice-panel: rgba(18, 8, 38, 0.88);
+  --vice-pink: #ff2a85;
+  --vice-cyan: #00f0ff;
+  --vice-purple: #9d4edd;
+  --vice-sunset: #ff7a00;
+  --vice-border-pink: rgba(255, 42, 133, 0.3);
+  --vice-border-cyan: rgba(0, 240, 255, 0.3);
 }
 
 * {
@@ -23,7 +35,7 @@ html {
 body {
   margin: 0;
   overflow-x: clip;
-  background: #040002;
+  background: #07020d;
   color: #ffffff;
   font-family: var(--font-body), Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -40,7 +52,7 @@ button {
   font: inherit;
 }
 ::selection {
-  background: #ff003c;
+  background: #ff2a85;
   color: #ffffff;
 }
 
@@ -62,7 +74,8 @@ button {
 .paper {
   position: relative;
   isolation: isolate;
-  background: #040002;
+  background: rgba(7, 2, 13, 0.45);
+  backdrop-filter: blur(8px);
   color: #ffffff;
 }
 .paper::before {
@@ -71,14 +84,14 @@ button {
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  opacity: 0.16;
+  opacity: 0.18;
   background-image:
-    linear-gradient(to right, rgba(255, 0, 60, 0.12) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 0, 60, 0.12) 1px, transparent 1px);
+    linear-gradient(to right, rgba(0, 240, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 42, 133, 0.1) 1px, transparent 1px);
   background-size: 3rem 3rem;
 }
 .dark {
-  background: #040002;
+  background: transparent;
   color: #ffffff;
 }
 .section {
@@ -810,8 +823,8 @@ button {
 /* Shared interior-page layout */
 .page-hero {
   padding: 95px 0 86px;
-  background: #080104;
-  border-bottom: 1px solid rgba(255, 0, 60, 0.25);
+  background: #0e051c;
+  border-bottom: 1px solid rgba(255, 42, 133, 0.25);
   color: #ffffff;
 }
 .page-hero-grid {
@@ -822,7 +835,7 @@ button {
 }
 .page-index {
   align-self: start;
-  color: #ff003c;
+  color: #00f0ff;
   font-size: 0.64rem;
   text-transform: uppercase;
 }
@@ -836,12 +849,12 @@ button {
   margin: 0;
   font-size: clamp(1.05rem, 1.5vw, 1.3rem);
   line-height: 1.6;
-  color: #d6bac2;
+  color: #d8cde8;
 }
 .page-summary .fine {
   display: block;
   margin-top: 28px;
-  color: #a38890;
+  color: #a89fc0;
 }
 .content-grid {
   display: grid;
@@ -849,10 +862,10 @@ button {
   gap: 70px;
 }
 .aside-label {
-  color: #ff003c;
+  color: #ff2a85;
 }
 .schedule {
-  border-top: 1px solid rgba(255, 0, 60, 0.25);
+  border-top: 1px solid rgba(255, 42, 133, 0.25);
 }
 .schedule-item {
   display: grid;
@@ -860,18 +873,18 @@ button {
   gap: 32px;
   align-items: center;
   min-height: 118px;
-  border-bottom: 1px solid rgba(255, 0, 60, 0.2);
+  border-bottom: 1px solid rgba(255, 42, 133, 0.2);
   transition: background-color 0.2s ease;
 }
 .schedule-item:hover {
-  background: rgba(255, 0, 60, 0.03);
+  background: rgba(255, 42, 133, 0.05);
 }
 .schedule-item time {
-  color: #ff003c;
+  color: #ff2a85;
   font-family: var(--font-mono), monospace;
   font-weight: 700;
   font-size: 0.72rem;
-  text-shadow: 0 0 10px rgba(255, 0, 60, 0.4);
+  text-shadow: 0 0 10px rgba(255, 42, 133, 0.5);
 }
 .schedule-item h3 {
   margin: 0;
@@ -881,13 +894,13 @@ button {
 }
 .schedule-item p {
   margin: 8px 0 0;
-  color: #c9aeb5;
+  color: #b8accc;
   font-size: 0.78rem;
 }
 .schedule-item span {
   font-size: 0.65rem;
   text-transform: uppercase;
-  color: #ff003c;
+  color: #00f0ff;
   font-family: var(--font-mono), monospace;
   font-weight: bold;
 }
@@ -898,43 +911,43 @@ button {
 }
 .day-switch span {
   padding: 10px 14px;
-  border: 1px solid rgba(255, 0, 60, 0.35);
+  border: 1px solid rgba(255, 42, 133, 0.35);
   font-family: var(--font-mono), monospace;
   font-size: 0.65rem;
   text-transform: uppercase;
   color: #ffffff;
-  background: rgba(255, 0, 60, 0.06);
-  border-radius: 4px;
+  background: rgba(255, 42, 133, 0.08);
+  border-radius: 6px;
 }
 .day-switch span:first-child {
-  background: #ff003c;
+  background: linear-gradient(135deg, #ff2a85, #9d4edd);
   color: #ffffff;
-  border-color: #ff003c;
-  box-shadow: 0 0 16px rgba(255, 0, 60, 0.45);
+  border-color: #ff2a85;
+  box-shadow: 0 0 16px rgba(255, 42, 133, 0.5);
 }
 .notice {
   margin-top: 32px;
   padding: 20px;
-  border: 1px solid rgba(255, 0, 60, 0.25);
-  border-left: 4px solid #ff003c;
-  background: rgba(255, 0, 60, 0.07);
-  border-radius: 4px;
+  border: 1px solid rgba(255, 42, 133, 0.25);
+  border-left: 4px solid #ff2a85;
+  background: rgba(255, 42, 133, 0.08);
+  border-radius: 6px;
 }
 .notice p {
   margin: 0;
   font-size: 0.76rem;
   line-height: 1.6;
-  color: #e5c9d0;
+  color: #e6ddf2;
 }
 .fact-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  border-top: 1px solid rgba(255, 0, 60, 0.25);
+  border-top: 1px solid rgba(255, 42, 133, 0.25);
 }
 .fact {
   min-height: 290px;
   padding: 26px;
-  border-right: 1px solid rgba(255, 0, 60, 0.25);
+  border-right: 1px solid rgba(255, 42, 133, 0.25);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1294,37 +1307,55 @@ button {
 }
 
 /* ========================================================
-   CYBERPUNK 2077 BLACKWALL DESIGN SYSTEM
+   VICE CITY / SYNTHWAVE NEON DESIGN SYSTEM
    ======================================================== */
 
 :root {
-  --blackwall-bg: #040002;
-  --blackwall-surface: #0a0104;
-  --blackwall-card: #0e0206;
-  --blackwall-panel: rgba(14, 2, 6, 0.85);
-  --blackwall-red: #ff003c;
-  --blackwall-red-glow: rgba(255, 0, 60, 0.55);
-  --blackwall-crimson: #d90429;
-  --blackwall-flare: #ff2a55;
-  --blackwall-amber: #ffaa00;
-  --blackwall-border: rgba(255, 0, 60, 0.3);
-  --blackwall-border-subtle: rgba(255, 255, 255, 0.12);
-  --blackwall-text-dim: #a38890;
+  --vice-bg: #07020d;
+  --vice-surface: #0e051c;
+  --vice-card: #15092b;
+  --vice-panel: rgba(21, 9, 43, 0.88);
+  --vice-pink: #ff2a85;
+  --vice-pink-glow: rgba(255, 42, 133, 0.6);
+  --vice-cyan: #00f0ff;
+  --vice-cyan-glow: rgba(0, 240, 255, 0.6);
+  --vice-purple: #9d4edd;
+  --vice-purple-glow: rgba(157, 78, 221, 0.55);
+  --vice-sunset: #ff7a00;
+  --vice-sunset-glow: rgba(255, 122, 0, 0.55);
+  --vice-border-pink: rgba(255, 42, 133, 0.32);
+  --vice-border-cyan: rgba(0, 240, 255, 0.32);
+  --vice-border-purple: rgba(157, 78, 221, 0.3);
+  --vice-text-dim: #a89fc0;
+  --vice-text-bright: #ffffff;
+
+  /* Backward-compatible aliases mapped to Vice City */
+  --blackwall-bg: #07020d;
+  --blackwall-surface: #0e051c;
+  --blackwall-card: #15092b;
+  --blackwall-panel: rgba(21, 9, 43, 0.88);
+  --blackwall-red: #ff2a85;
+  --blackwall-red-glow: rgba(255, 42, 133, 0.6);
+  --blackwall-crimson: #d946ef;
+  --blackwall-flare: #00f0ff;
+  --blackwall-amber: #ff7a00;
+  --blackwall-border: rgba(255, 42, 133, 0.32);
+  --blackwall-border-subtle: rgba(0, 240, 255, 0.18);
+  --blackwall-text-dim: #a89fc0;
   --blackwall-text-bright: #ffffff;
 
-  /* Backward-compatible aliases mapped to Blackwall */
-  --cyber-bg: #040002;
-  --cyber-card: #0e0206;
-  --cyber-panel: rgba(14, 2, 6, 0.85);
-  --cyber-green: #ff003c;
-  --cyber-green-glow: rgba(255, 0, 60, 0.55);
-  --cyber-purple: #ff2a55;
-  --cyber-purple-glow: rgba(255, 42, 85, 0.55);
-  --cyber-blue: #ff0055;
-  --cyber-blue-glow: rgba(255, 0, 85, 0.55);
-  --cyber-amber: #ffaa00;
-  --cyber-amber-glow: rgba(255, 170, 0, 0.5);
-  --cyber-border: rgba(255, 0, 60, 0.3);
+  --cyber-bg: #07020d;
+  --cyber-card: #15092b;
+  --cyber-panel: rgba(21, 9, 43, 0.88);
+  --cyber-green: #00f0ff;
+  --cyber-green-glow: rgba(0, 240, 255, 0.6);
+  --cyber-purple: #ff2a85;
+  --cyber-purple-glow: rgba(255, 42, 133, 0.6);
+  --cyber-blue: #00f0ff;
+  --cyber-blue-glow: rgba(0, 240, 255, 0.6);
+  --cyber-amber: #ff7a00;
+  --cyber-amber-glow: rgba(255, 122, 0, 0.55);
+  --cyber-border: rgba(255, 42, 133, 0.32);
 }
 
 @keyframes scan-line-down {
@@ -1333,18 +1364,18 @@ button {
 }
 
 @keyframes pulse-subtle {
-  0%, 100% { opacity: 0.4; }
+  0%, 100% { opacity: 0.45; }
   50% { opacity: 0.95; }
 }
 
-@keyframes blackwall-horizon-glow {
+@keyframes vice-horizon-glow {
   0%, 100% {
     opacity: 0.85;
-    box-shadow: 0 0 30px rgba(255, 0, 60, 0.8), 0 0 60px rgba(255, 42, 85, 0.5);
+    box-shadow: 0 0 35px rgba(255, 42, 133, 0.8), 0 0 70px rgba(0, 240, 255, 0.5);
   }
   50% {
     opacity: 1;
-    box-shadow: 0 0 45px rgba(255, 0, 60, 1), 0 0 90px rgba(255, 42, 85, 0.7);
+    box-shadow: 0 0 50px rgba(255, 42, 133, 1), 0 0 95px rgba(0, 240, 255, 0.75);
   }
 }
 
@@ -1357,91 +1388,152 @@ button {
 }
 
 .animate-horizon-glow {
-  animation: blackwall-horizon-glow 4s ease-in-out infinite;
+  animation: vice-horizon-glow 4s ease-in-out infinite;
 }
 
-/* Blackwall Glows */
+/* Vice City Neon Glows */
+.glow-pink,
 .glow-red {
-  box-shadow: 0 0 28px rgba(255, 0, 60, 0.5);
+  box-shadow: 0 0 28px rgba(255, 42, 133, 0.55);
 }
+.glow-pink-sm,
 .glow-red-sm {
-  box-shadow: 0 0 14px rgba(255, 0, 60, 0.35);
+  box-shadow: 0 0 14px rgba(255, 42, 133, 0.4);
 }
+.glow-pink-lg,
 .glow-red-lg {
-  box-shadow: 0 0 45px rgba(255, 0, 60, 0.7);
+  box-shadow: 0 0 48px rgba(255, 42, 133, 0.75);
 }
-.text-glow-red {
-  text-shadow: 0 0 20px rgba(255, 0, 60, 0.8), 0 0 40px rgba(255, 0, 60, 0.4);
+.glow-cyan {
+  box-shadow: 0 0 28px rgba(0, 240, 255, 0.55);
 }
-.text-glow-flare {
-  text-shadow: 0 0 20px rgba(255, 42, 85, 0.85);
+.glow-cyan-sm {
+  box-shadow: 0 0 14px rgba(0, 240, 255, 0.4);
+}
+.glow-purple {
+  box-shadow: 0 0 28px rgba(157, 78, 221, 0.55);
+}
+.glow-sunset {
+  box-shadow: 0 0 28px rgba(255, 122, 0, 0.55);
 }
 
-/* Blackwall Grid & Digital Net Texture */
+.text-glow-pink,
+.text-glow-red {
+  text-shadow: 0 0 18px rgba(255, 42, 133, 0.85), 0 0 38px rgba(255, 42, 133, 0.45);
+}
+.text-glow-cyan,
+.text-glow-flare {
+  text-shadow: 0 0 18px rgba(0, 240, 255, 0.85), 0 0 38px rgba(0, 240, 255, 0.45);
+}
+.text-glow-purple {
+  text-shadow: 0 0 18px rgba(157, 78, 221, 0.85), 0 0 38px rgba(157, 78, 221, 0.45);
+}
+.text-glow-sunset {
+  text-shadow: 0 0 18px rgba(255, 122, 0, 0.85);
+}
+
+/* Vice City Gradients */
+.vice-gradient-text {
+  background: linear-gradient(135deg, #ff2a85 0%, #d946ef 50%, #00f0ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.vice-sunset-gradient-text {
+  background: linear-gradient(135deg, #ffbe0b 0%, #ff7a00 50%, #ff2a85 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.vice-cyan-pink-gradient-text {
+  background: linear-gradient(135deg, #00f0ff 0%, #9d4edd 50%, #ff2a85 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Vice City Grid & Synthwave Net Texture */
 .cyber-grid,
-.blackwall-grid {
+.blackwall-grid,
+.vice-grid {
   position: relative;
   isolation: isolate;
 }
 .cyber-grid::before,
-.blackwall-grid::before {
+.blackwall-grid::before,
+.vice-grid::before {
   content: '';
   position: absolute;
   inset: 0;
   pointer-events: none;
   z-index: -1;
   background-image:
-    linear-gradient(to right, rgba(255, 0, 60, 0.08) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 0, 60, 0.08) 1px, transparent 1px);
+    linear-gradient(to right, rgba(0, 240, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 42, 133, 0.08) 1px, transparent 1px);
   background-size: 3rem 3rem;
   mask-image: radial-gradient(ellipse at center, black 35%, transparent 85%);
   -webkit-mask-image: radial-gradient(ellipse at center, black 35%, transparent 85%);
 }
 
 .cyber-dots,
-.blackwall-dots {
-  background-image: radial-gradient(rgba(255, 0, 60, 0.12) 1px, transparent 1px);
+.blackwall-dots,
+.vice-dots {
+  background-image: radial-gradient(rgba(255, 42, 133, 0.14) 1px, transparent 1px);
   background-size: 20px 20px;
 }
 
-/* Horizontal Blackwall Incandescent Flare Beam */
-.blackwall-beam {
+/* Vice City Neon Horizon Flare Beam */
+.blackwall-beam,
+.vice-beam {
   position: absolute;
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent 0%, rgba(255, 0, 60, 0.8) 20%, #ffffff 50%, rgba(255, 0, 60, 0.8) 80%, transparent 100%);
-  box-shadow: 0 0 25px rgba(255, 0, 60, 0.85), 0 0 50px rgba(255, 42, 85, 0.55);
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 42, 133, 0.85) 20%, #00f0ff 50%, rgba(157, 78, 221, 0.85) 80%, transparent 100%);
+  box-shadow: 0 0 25px rgba(255, 42, 133, 0.85), 0 0 50px rgba(0, 240, 255, 0.6);
 }
 
-/* Glass & Terminal cards */
+/* Glass & Terminal Cards */
 .glass-cyber-card,
-.glass-blackwall-card {
-  background: rgba(14, 2, 6, 0.85);
+.glass-blackwall-card,
+.glass-vice-card {
+  background: rgba(14, 5, 28, 0.82);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 0, 60, 0.25);
+  border: 1px solid rgba(255, 42, 133, 0.28);
 }
 .glass-cyber-card:hover,
-.glass-blackwall-card:hover {
-  border-color: rgba(255, 0, 60, 0.6);
-  box-shadow: 0 0 24px rgba(255, 0, 60, 0.2);
+.glass-blackwall-card:hover,
+.glass-vice-card:hover {
+  border-color: rgba(255, 42, 133, 0.65);
+  box-shadow: 0 0 26px rgba(255, 42, 133, 0.25);
 }
 
-.glass-purple-card {
-  background: rgba(18, 3, 10, 0.85);
+.glass-purple-card,
+.glass-vice-purple {
+  background: rgba(21, 9, 43, 0.82);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 42, 85, 0.28);
+  border: 1px solid rgba(157, 78, 221, 0.32);
 }
-.glass-purple-card:hover {
-  border-color: rgba(255, 42, 85, 0.65);
+.glass-purple-card:hover,
+.glass-vice-purple:hover {
+  border-color: rgba(157, 78, 221, 0.7);
+  box-shadow: 0 0 26px rgba(157, 78, 221, 0.25);
+}
+
+.glass-vice-cyan {
+  background: rgba(8, 20, 36, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(0, 240, 255, 0.32);
+}
+.glass-vice-cyan:hover {
+  border-color: rgba(0, 240, 255, 0.7);
+  box-shadow: 0 0 26px rgba(0, 240, 255, 0.25);
 }
 
 .terminal-frame {
-  background: #050102;
-  border: 1px solid rgba(255, 0, 60, 0.35);
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.8), inset 0 0 30px rgba(255, 0, 60, 0.05);
+  background: #090314;
+  border: 1px solid rgba(255, 42, 133, 0.35);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.85), inset 0 0 30px rgba(255, 42, 133, 0.08);
 }
 
 /* Circuit Chamfer Clips */
@@ -1452,13 +1544,13 @@ button {
   clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);
 }
 
-/* Sponsor Grayscale Filter */
+/* Sponsor Grayscale Filter with Vice Neon Hover */
 .sponsor-logo-hybrid {
   filter: grayscale(1) brightness(0.85) contrast(1.15);
   transition: all 0.3s ease;
 }
 .sponsor-logo-hybrid:hover {
-  filter: grayscale(0) brightness(1.15) drop-shadow(0 0 12px rgba(255, 0, 60, 0.5));
+  filter: grayscale(0) brightness(1.2) drop-shadow(0 0 14px rgba(255, 42, 133, 0.65));
   transform: translateY(-2px) scale(1.04);
 }
 

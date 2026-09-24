@@ -13,45 +13,45 @@ export default function Home() {
   return (
     <>
       <SiteHeader dark />
-      <main className="min-h-screen bg-[#040002]">
-        {/* 1. Cyber Void Radar Hero */}
+      <main className="min-h-screen bg-transparent relative isolate">
+        {/* 1. Vice City Neon Radar Hero */}
         <RadarHero />
 
-        {/* 2. Brutalist / Cyber Ticker Tape */}
-        <div className="ticker border-y border-[#ff003c]/25 bg-[#080104] py-2.5">
+        {/* 2. Synthwave / Vice Ticker Tape */}
+        <div className="ticker border-y border-[#ff2a85]/30 bg-[#0e051c]/75 backdrop-blur-md py-2.5">
           <div className="ticker-track font-mono text-xs uppercase tracking-[0.2em] font-bold">
             <span className="text-white">Conference</span>
-            <span className="text-[#ff003c]">{'///'}</span>
+            <span className="text-[#ff2a85]">{'///'}</span>
             <span className="text-white">8h Capture The Flag</span>
-            <span className="text-[#ff003c]">{'///'}</span>
+            <span className="text-[#00f0ff]">{'///'}</span>
             <span className="text-white">4000€ Prize Pool</span>
-            <span className="text-[#ff003c]">{'///'}</span>
+            <span className="text-[#ff2a85]">{'///'}</span>
             <span className="text-white">Digital Forensics</span>
-            <span className="text-[#ff003c]">{'///'}</span>
+            <span className="text-[#00f0ff]">{'///'}</span>
             <span className="text-white">AI Security</span>
-            <span className="text-[#ff003c]">{'///'}</span>
+            <span className="text-[#ff2a85]">{'///'}</span>
             <span className="text-white">Cloud Hardening</span>
-            <span className="text-[#ff003c]">{'///'}</span>
+            <span className="text-[#00f0ff]">{'///'}</span>
             <span className="text-white">Timișoara</span>
-            <span className="text-[#ff003c]">{'///'}</span>
+            <span className="text-[#ff2a85]">{'///'}</span>
             <span className="text-white">Spring 2027</span>
-            <span className="text-[#ff003c]">{'///'}</span>
+            <span className="text-[#00f0ff]">{'///'}</span>
             <span className="text-white">ISACA CPE Accredited</span>
-            <span className="text-[#ff003c]">{'///'}</span>
+            <span className="text-[#ff2a85]">{'///'}</span>
             <span className="text-white">Conference</span>
-            <span className="text-[#ff003c]">{'///'}</span>
+            <span className="text-[#00f0ff]">{'///'}</span>
             <span className="text-white">8h Capture The Flag</span>
-            <span className="text-[#ff003c]">{'///'}</span>
+            <span className="text-[#ff2a85]">{'///'}</span>
             <span className="text-white">4000€ Prize Pool</span>
-            <span className="text-[#ff003c]">{'///'}</span>
+            <span className="text-[#00f0ff]">{'///'}</span>
             <span className="text-white">Digital Forensics</span>
-            <span className="text-[#ff003c]">{'///'}</span>
+            <span className="text-[#ff2a85]">{'///'}</span>
             <span className="text-white">AI Security</span>
-            <span className="text-[#ff003c]">{'///'}</span>
+            <span className="text-[#00f0ff]">{'///'}</span>
             <span className="text-white">Cloud Hardening</span>
-            <span className="text-[#ff003c]">{'///'}</span>
+            <span className="text-[#ff2a85]">{'///'}</span>
             <span className="text-white">Timișoara</span>
-            <span className="text-[#ff003c]">{'///'}</span>
+            <span className="text-[#00f0ff]">{'///'}</span>
           </div>
         </div>
 

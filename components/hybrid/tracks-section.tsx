@@ -5,59 +5,59 @@ const tracks = [
     icon: Search,
     title: 'Digital Forensics',
     code: 'TRK_01',
-    color: '#ff003c',
+    color: '#ff2a85',
     desc: 'Evidence acquisition, chain-of-custody protocols, memory forensics, and deep incident reconstruction techniques.',
   },
   {
     icon: Brain,
     title: 'AI Security & LLMs',
     code: 'TRK_02',
-    color: '#ff2a55',
+    color: '#00f0ff',
     desc: 'Exploring AI-driven threat detection, agentic security operations, adversarial prompt injection, and model safeguards.',
   },
   {
     icon: Cloud,
     title: 'Cloud & Infrastructure',
     code: 'TRK_03',
-    color: '#ff003c',
+    color: '#9d4edd',
     desc: 'Securing multi-cloud architectures, Kubernetes and container hardening, IAM zero-trust, and automated DevSecOps.',
   },
   {
     icon: Shield,
     title: 'Modern Threat Detection',
     code: 'TRK_04',
-    color: '#ffaa00',
+    color: '#ff7a00',
     desc: 'Detection engineering with high-fidelity telemetry, IoCs, MITRE ATT&CK matrix mapping, and rapid correlation.',
   },
   {
     icon: Flag,
     title: 'Capture The Flag (CTF)',
     code: 'TRK_05',
-    color: '#ff2a55',
+    color: '#ff2a85',
     desc: '8-hour intensive competition across web, crypto, reverse engineering, forensics, and OSINT with 4000€ in prizes.',
   },
 ];
 
 export function TracksSection() {
   return (
-    <section className="section bg-[#040002] text-white relative isolate overflow-hidden border-t border-[#ff003c]/20">
+    <section className="section bg-transparent text-white relative isolate overflow-hidden border-t border-[#ff2a85]/20">
       {/* Background Ambience */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,0,60,0.06),transparent_60%)]" />
-        <div className="absolute inset-0 opacity-[0.05] blackwall-grid" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,42,133,0.1),transparent_60%)]" />
+        <div className="absolute inset-0 opacity-[0.08] vice-grid" />
       </div>
 
       <div className="container relative z-10 mx-auto px-4 md:px-8">
         {/* Editorial Top Headline */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
           <div className="max-w-2xl text-left">
-            <p className="eyebrow !text-[#ff003c] text-[#ff003c] font-mono text-xs uppercase tracking-widest mb-2 font-bold">
+            <p className="eyebrow !text-[#ff2a85] text-[#ff2a85] font-mono text-xs uppercase tracking-widest mb-2 font-bold text-glow-pink">
               {`// OPERATIONAL CURRICULUM`}
             </p>
             <h2 className="display section-title text-5xl sm:text-6xl md:text-7xl font-black uppercase tracking-tight text-white mt-2">
               Decode the
               <br />
-              <span className="text-[#ff003c] text-glow-red">
+              <span className="text-[#00f0ff] text-glow-cyan">
                 Unknown.
               </span>
             </h2>
@@ -68,8 +68,8 @@ export function TracksSection() {
           </div>
 
           <div className="max-w-md w-full">
-            <div className="p-5 rounded-2xl border border-[#ff003c]/25 bg-[#0e0206]/90 backdrop-blur-xl shadow-2xl">
-              <span className="font-mono text-[11px] font-bold uppercase tracking-widest text-[#ff003c] block mb-1.5">
+            <div className="p-5 rounded-2xl border border-[#ff2a85]/25 bg-[#120524]/90 backdrop-blur-xl shadow-2xl">
+              <span className="font-mono text-[11px] font-bold uppercase tracking-widest text-[#ff2a85] block mb-1.5">
                 {`// DUAL-MODE EXECUTION`}
               </span>
               <p className="text-xs text-white/80 font-body leading-relaxed">
@@ -81,14 +81,14 @@ export function TracksSection() {
           </div>
         </div>
 
-        {/* 5 Tactical Track Cards - Blackwall Cyber Glass */}
+        {/* 5 Tactical Track Cards - Vice City Neon Glass */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-5">
           {tracks.map((t) => {
             const Icon = t.icon;
             return (
               <div
                 key={t.title}
-                className="group relative flex flex-col justify-between p-6 rounded-2xl border border-[#ff003c]/20 bg-[#0d0206]/85 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-[#ff003c]/60 hover:shadow-[0_14px_36px_rgba(255,0,60,0.15)] overflow-hidden"
+                className="group relative flex flex-col justify-between p-6 rounded-2xl border border-[#ff2a85]/20 bg-[#100422]/85 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-[#ff2a85]/60 hover:shadow-[0_14px_36px_rgba(255,42,133,0.22)] overflow-hidden"
               >
                 {/* Glowing left accent line */}
                 <div
@@ -114,7 +114,7 @@ export function TracksSection() {
                     </div>
                   </div>
 
-                  <h3 className="font-mono font-bold text-sm sm:text-base uppercase tracking-wide text-white group-hover:text-[#ff003c] transition-colors mb-2.5">
+                  <h3 className="font-mono font-bold text-sm sm:text-base uppercase tracking-wide text-white group-hover:text-[#00f0ff] transition-colors mb-2.5">
                     {t.title}
                   </h3>
 

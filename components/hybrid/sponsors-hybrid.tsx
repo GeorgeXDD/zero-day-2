@@ -33,17 +33,17 @@ const ecosystemPartners = [
 
 export function SponsorsHybrid() {
   return (
-    <section id="sponsors" className="section bg-[#040002] text-white relative overflow-hidden border-t border-[#ff003c]/20">
+    <section id="sponsors" className="section bg-transparent text-white relative overflow-hidden border-t border-[#ff2a85]/20">
       <div className="container relative z-10 mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div>
-            <span className="font-mono text-xs uppercase tracking-[0.24em] text-[#ff003c] block mb-2 font-bold">
+            <span className="font-mono text-xs uppercase tracking-[0.24em] text-[#00f0ff] block mb-2 font-bold text-glow-cyan">
               {`// COLLABORATIVE ALLIANCE`}
             </span>
             <h2 className="display text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-tight">
               Backed by{' '}
-              <span className="text-[#ff003c] text-glow-red">
+              <span className="text-[#ff2a85] text-glow-pink">
                 Pioneers.
               </span>
             </h2>
@@ -56,7 +56,7 @@ export function SponsorsHybrid() {
           <div>
             <a
               href="/partners"
-              className="inline-flex items-center gap-2 rounded-xl border border-[#ff003c] bg-[#ff003c]/15 px-5 py-3 font-mono text-xs font-bold uppercase tracking-wider text-[#ff003c] hover:bg-[#ff003c] hover:text-white transition-all shadow-[0_0_20px_rgba(255,0,60,0.2)]"
+              className="inline-flex items-center gap-2 rounded-xl border border-[#ff2a85] bg-[#ff2a85]/15 px-5 py-3 font-mono text-xs font-bold uppercase tracking-wider text-[#ff2a85] hover:bg-[#ff2a85] hover:text-white transition-all shadow-[0_0_20px_rgba(255,42,133,0.3)]"
             >
               Partner with Edition #2
               <ArrowUpRight size={14} />
@@ -66,7 +66,7 @@ export function SponsorsHybrid() {
 
         {/* Tier 1: Main Academic & Industry Champions */}
         <div className="mb-12">
-          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#ff003c] block mb-4 font-bold">
+          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#ff2a85] block mb-4 font-bold">
             {`// FOUNDING & TITLE PARTNERS`}
           </span>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -76,7 +76,7 @@ export function SponsorsHybrid() {
                 href={item.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group p-6 rounded-2xl border border-[#ff003c]/20 bg-[#0e0206]/85 backdrop-blur-md flex flex-col items-center justify-center min-h-[140px] text-center transition-all duration-300 hover:border-[#ff003c]/60 hover:bg-[#140207] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,0,60,0.25)]"
+                className="group p-6 rounded-2xl border border-[#ff2a85]/25 bg-[#100422]/85 backdrop-blur-md flex flex-col items-center justify-center min-h-[140px] text-center transition-all duration-300 hover:border-[#ff2a85]/60 hover:bg-[#18052a] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,42,133,0.25)]"
               >
                 <div className="relative h-14 w-full flex items-center justify-center">
                   <Image
@@ -87,7 +87,7 @@ export function SponsorsHybrid() {
                     className="max-h-12 w-auto object-contain sponsor-logo-hybrid"
                   />
                 </div>
-                <span className="font-mono text-[9px] uppercase tracking-wider text-[#ff003c] mt-3 font-bold">
+                <span className="font-mono text-[9px] uppercase tracking-wider text-[#00f0ff] mt-3 font-bold">
                   {item.tier}
                 </span>
               </a>
@@ -97,7 +97,7 @@ export function SponsorsHybrid() {
 
         {/* Tier 2: Industry Partners */}
         <div className="mb-12">
-          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#ff2a55] block mb-4 font-bold">
+          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#00f0ff] block mb-4 font-bold">
             {`// INDUSTRY CYBERSECURITY PARTNERS`}
           </span>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -107,7 +107,7 @@ export function SponsorsHybrid() {
                 href={item.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group p-5 rounded-2xl border border-[#ff2a55]/20 bg-[#0e0206]/85 flex items-center justify-center min-h-[110px] transition-all duration-300 hover:border-[#ff2a55]/60 hover:bg-[#140207] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(255,42,85,0.2)]"
+                className="group p-5 rounded-2xl border border-[#00f0ff]/20 bg-[#091428]/85 flex items-center justify-center min-h-[110px] transition-all duration-300 hover:border-[#00f0ff]/60 hover:bg-[#0c1a34] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,240,255,0.25)]"
               >
                 <div className="relative h-10 w-full flex items-center justify-center">
                   <Image
@@ -125,7 +125,7 @@ export function SponsorsHybrid() {
 
         {/* Tier 3: Institutional, Public & Community Alliances */}
         <div>
-          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/40 block mb-4">
+          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/50 block mb-4">
             {`// INSTITUTIONAL, COMMUNITY & MEDIA ALLIANCES`}
           </span>
           <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-3">
@@ -136,7 +136,7 @@ export function SponsorsHybrid() {
                 target="_blank"
                 rel="noopener noreferrer"
                 title={item.name}
-                className="group p-3 rounded-xl border border-white/5 bg-white/[0.015] flex items-center justify-center min-h-[80px] transition-all duration-300 hover:border-white/30 hover:bg-white/[0.05]"
+                className="group p-3 rounded-xl border border-white/10 bg-white/[0.02] flex items-center justify-center min-h-[80px] transition-all duration-300 hover:border-[#9d4edd]/50 hover:bg-[#9d4edd]/10"
               >
                 <div className="relative h-8 w-full flex items-center justify-center">
                   <Image

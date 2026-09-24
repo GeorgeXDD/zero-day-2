@@ -56,22 +56,22 @@ const teamMembers = [
 
 export function TeamSection() {
   return (
-    <section id="team" className="section relative bg-[#040002] text-white overflow-hidden isolate border-t border-[#ff003c]/20">
-      {/* Background Matrix & Subtle Blackwall Glows */}
+    <section id="team" className="section relative bg-transparent text-white overflow-hidden isolate border-t border-[#ff2a85]/20">
+      {/* Background Matrix & Subtle Vice City Glows */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_15%,rgba(255,0,60,0.1),transparent_50%)]" />
-        <div className="absolute inset-0 opacity-[0.06] blackwall-grid" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_15%,rgba(255,42,133,0.12),transparent_50%)]" />
+        <div className="absolute inset-0 opacity-[0.08] vice-grid" />
       </div>
 
       <div className="container relative z-10 mx-auto px-4 md:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="font-mono text-xs uppercase tracking-[0.24em] text-[#ff003c] block mb-2 font-bold">
+          <span className="font-mono text-xs uppercase tracking-[0.24em] text-[#00f0ff] block mb-2 font-bold text-glow-cyan">
             {`// THE PEOPLE BEHIND THE EVENT`}
           </span>
           <h2 className="display text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-tight">
             Meet The{' '}
-            <span className="text-[#ff003c] text-glow-red">
+            <span className="text-[#ff2a85] text-glow-pink">
               Crew.
             </span>
           </h2>
@@ -89,7 +89,7 @@ export function TeamSection() {
               href={member.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative rounded-2xl border border-[#ff003c]/20 bg-[#0e0206]/85 backdrop-blur-xl p-5 transition-all duration-300 hover:border-[#ff003c]/60 hover:-translate-y-1.5 hover:shadow-[0_12px_36px_rgba(255,0,60,0.2)] flex flex-col justify-between"
+              className="group relative rounded-2xl border border-[#ff2a85]/20 bg-[#100422]/85 backdrop-blur-xl p-5 transition-all duration-300 hover:border-[#ff2a85]/60 hover:-translate-y-1.5 hover:shadow-[0_12px_36px_rgba(255,42,133,0.22)] flex flex-col justify-between"
             >
               {/* Photo Area */}
               <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-black/60 border border-white/5">
@@ -110,13 +110,13 @@ export function TeamSection() {
                 {/* Subtle gradient vignette */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-70 group-hover:opacity-40 transition-opacity" />
 
-                {/* Corner Cyber Brackets */}
-                <div className="absolute top-2.5 right-2.5 h-3 w-3 border-t-2 border-r-2 border-[#ff003c] opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="absolute bottom-2.5 left-2.5 h-3 w-3 border-b-2 border-l-2 border-[#ff003c] opacity-0 group-hover:opacity-100 transition-opacity" />
+                {/* Corner Synthwave Brackets */}
+                <div className="absolute top-2.5 right-2.5 h-3 w-3 border-t-2 border-r-2 border-[#00f0ff] opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute bottom-2.5 left-2.5 h-3 w-3 border-b-2 border-l-2 border-[#00f0ff] opacity-0 group-hover:opacity-100 transition-opacity" />
 
                 {/* LinkedIn Overlay Button */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  <span className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-[#ff003c]/20 border border-[#ff003c]/60 backdrop-blur-md font-mono text-xs uppercase tracking-wider text-white font-bold shadow-[0_0_20px_rgba(255,0,60,0.5)]">
+                  <span className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-[#ff2a85]/25 border border-[#ff2a85]/70 backdrop-blur-md font-mono text-xs uppercase tracking-wider text-white font-bold shadow-[0_0_20px_rgba(255,42,133,0.55)]">
                     <LinkedinIcon size={14} />
                     View LinkedIn
                   </span>
@@ -126,16 +126,16 @@ export function TeamSection() {
               {/* Text Info */}
               <div className="mt-5">
                 <div className="flex items-center justify-between">
-                  <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#ff003c] font-bold">
+                  <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#00f0ff] font-bold">
                     {member.nickname}
                   </span>
                   <ArrowUpRight
                     size={14}
-                    className="text-white/40 group-hover:text-[#ff003c] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
+                    className="text-white/40 group-hover:text-[#00f0ff] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
                   />
                 </div>
 
-                <h3 className="font-mono font-bold text-lg text-white mt-1 uppercase tracking-tight group-hover:text-[#ff003c] transition-colors">
+                <h3 className="font-mono font-bold text-lg text-white mt-1 uppercase tracking-tight group-hover:text-[#ff2a85] transition-colors">
                   {member.name}
                 </h3>
 

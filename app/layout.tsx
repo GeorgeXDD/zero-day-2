@@ -18,12 +18,17 @@ export const metadata: Metadata = {
   },
 };
 
+import { GlobalAmbientGradient } from '@/components/global-ambient-gradient';
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="relative bg-[#07020d] text-white selection:bg-[#ff2a85] selection:text-white antialiased overflow-x-hidden">
+        <GlobalAmbientGradient />
+        {children}
+      </body>
     </html>
   );
 }

@@ -31,50 +31,42 @@ export function RadarHero() {
   }, []);
 
   return (
-    <section className="relative isolate min-h-[92vh] flex items-center overflow-hidden bg-[#040002] text-white pt-24 pb-12 sm:pt-28 sm:pb-16">
-      {/* Dynamic Cyber Atmosphere & Blackwall Radar Background */}
-      <div className="absolute inset-0 pointer-events-none">
-        {/* Deep ambient dark gradient */}
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,#140207_0%,#060103_42%,#020001_100%)]" />
+    <section className="relative isolate min-h-[92vh] flex items-center overflow-hidden bg-transparent text-white pt-24 pb-12 sm:pt-28 sm:pb-16">
+      {/* GTA 6 Dusk Sunset Gradient Atmosphere (Soft, Blurry, No Radar Lines) */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden select-none">
+        {/* Vertical Sky Gradient (Sampled directly from GTA 6 dusk photo: #7e71a5 -> #c185a9 -> #f09c93 -> #fd9d7e) */}
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_0%,rgba(126,113,165,0.22)_18%,rgba(193,133,169,0.28)_46%,rgba(240,156,147,0.34)_70%,rgba(253,157,126,0.25)_88%,transparent_100%)]" />
 
-        {/* Ambient radial glows in Cyberpunk Blackwall red & flare */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,0,60,0.22),transparent_40%),radial-gradient(circle_at_85%_25%,rgba(255,42,85,0.18),transparent_35%),radial-gradient(circle_at_50%_80%,rgba(255,0,60,0.08),transparent_40%)]" />
+        {/* Large Blurry Sunset Horizon Bloom (Warm Peach / Sunset Glow from photo) */}
+        <div className="absolute bottom-[8%] left-1/2 -translate-x-1/2 w-[125%] h-[55%] rounded-[100%] bg-[radial-gradient(ellipse_at_center,rgba(253,157,126,0.36)_0%,rgba(240,156,147,0.25)_35%,rgba(193,133,169,0.12)_65%,transparent_80%)] blur-[95px]" />
 
-        {/* Diagonal light shafts */}
-        <div className="absolute -top-32 left-[-10%] h-[38rem] w-[24rem] rotate-[18deg] bg-[linear-gradient(180deg,rgba(255,0,60,0.18),rgba(255,0,60,0.02),transparent)] blur-3xl opacity-70" />
-        <div className="absolute -top-24 right-[-5%] h-[32rem] w-[18rem] rotate-[-22deg] bg-[linear-gradient(180deg,rgba(255,42,85,0.16),rgba(255,42,85,0.02),transparent)] blur-3xl opacity-60" />
+        {/* Upper-Mid Dusk Rose & Lavender Blurry Glow Orb */}
+        <div className="absolute top-[18%] left-1/2 -translate-x-1/2 w-[90%] h-[45%] rounded-[100%] bg-[radial-gradient(ellipse_at_center,rgba(193,133,169,0.24)_0%,rgba(144,121,165,0.18)_45%,transparent_75%)] blur-[100px]" />
 
-        {/* Fine matrix grid pattern */}
-        <div className="absolute inset-0 opacity-[0.1] blackwall-grid" />
+        {/* Left Side Glow: GTA Sunset Rose-Pink Accent */}
+        <div className="absolute top-[28%] -left-[12%] w-[55%] h-[60%] rounded-full bg-[radial-gradient(circle,rgba(255,42,133,0.24)_0%,rgba(193,133,169,0.15)_40%,transparent_70%)] blur-[110px]" />
 
-        {/* Animated Radar Scanline Beam moving down */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute left-0 right-0 top-0 h-[28vh] bg-gradient-to-t from-[rgba(255,0,60,0.22)] via-[rgba(255,0,60,0.05)] to-transparent animate-scan-line border-b border-[rgba(255,0,60,0.5)]" />
-        </div>
+        {/* Right Side Glow: Cool Evening Sky & Electric Cyan Accent */}
+        <div className="absolute top-[24%] -right-[12%] w-[55%] h-[60%] rounded-full bg-[radial-gradient(circle,rgba(0,240,255,0.18)_0%,rgba(126,113,165,0.15)_45%,transparent_70%)] blur-[110px]" />
 
-        {/* Blackwall Blazing Horizon Flare Beam across the background */}
-        <div className="absolute top-[52%] left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-[#ff003c] via-white to-transparent opacity-75 shadow-[0_0_35px_rgba(255,0,60,0.9),0_0_70px_rgba(255,42,85,0.6)] pointer-events-none" />
+        {/* Central Contrast Shield (ensures crystal clear readability for all typography and badges) */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(7,2,13,0.5)_0%,rgba(7,2,13,0.15)_65%,transparent_100%)]" />
 
-        {/* Ambient bottom light pillars */}
-        <div className="absolute inset-x-0 bottom-0 h-[30vh] pointer-events-none">
-          <div className="absolute left-[-2%] bottom-0 h-[80%] w-[10%] bg-[linear-gradient(180deg,transparent,rgba(255,0,60,0.12)_60%,rgba(255,0,60,0.45)_100%)] blur-[20px]" />
-          <div className="absolute left-[14%] bottom-0 h-[60%] w-[8%] bg-[linear-gradient(180deg,transparent,rgba(255,0,60,0.08)_60%,rgba(255,0,60,0.35)_100%)] blur-[16px]" />
-          <div className="absolute right-[14%] bottom-0 h-[60%] w-[8%] bg-[linear-gradient(180deg,transparent,rgba(255,42,85,0.08)_60%,rgba(255,42,85,0.35)_100%)] blur-[16px]" />
-          <div className="absolute right-[-2%] bottom-0 h-[80%] w-[10%] bg-[linear-gradient(180deg,transparent,rgba(255,42,85,0.12)_60%,rgba(255,42,85,0.45)_100%)] blur-[20px]" />
-        </div>
+        {/* Top Vignette (gentle blend into header) */}
+        <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#07020d]/80 to-transparent" />
       </div>
 
       {/* Main Hero Container - Structured Left-Aligned 2-Column Layout */}
       <div className="container relative z-10 mx-auto px-4 md:px-8 w-full">
         {/* Top Badges Ribbon with high-contrast white & vibrant colors */}
         <div className="flex flex-wrap items-center gap-3 mb-6">
-          <span className="inline-flex items-center gap-2 rounded-full border border-[#ff003c]/50 bg-[#ff003c]/15 px-3.5 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.16em] text-white">
-            <span className="h-2 w-2 rounded-full bg-[#ff003c] animate-ping" />
+          <span className="inline-flex items-center gap-2 rounded-full border border-[#ff2a85]/60 bg-[#ff2a85]/15 px-3.5 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.16em] text-white shadow-[0_0_12px_rgba(255,42,133,0.35)]">
+            <span className="h-2 w-2 rounded-full bg-[#ff2a85] animate-ping" />
             Edition #2 · Spring 2027
           </span>
 
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3.5 py-1.5 font-mono text-[11px] font-bold tracking-[0.12em] text-white">
-            <MapPin size={13} className="text-[#ff003c]" />
+          <span className="inline-flex items-center gap-2 rounded-full border border-[#00f0ff]/40 bg-[#00f0ff]/10 px-3.5 py-1.5 font-mono text-[11px] font-bold tracking-[0.12em] text-white">
+            <MapPin size={13} className="text-[#00f0ff]" />
             Timișoara, Romania
           </span>
 
@@ -82,9 +74,9 @@ export function RadarHero() {
             href="https://www.isaca.org"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-[#ffaa00]/50 bg-[#ffaa00]/15 px-3.5 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.12em] text-white hover:bg-[#ffaa00]/25 transition-colors"
+            className="inline-flex items-center gap-2 rounded-full border border-[#ff7a00]/50 bg-[#ff7a00]/15 px-3.5 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.12em] text-white hover:bg-[#ff7a00]/25 transition-colors"
           >
-            <ShieldCheck size={14} className="text-[#ffaa00]" />
+            <ShieldCheck size={14} className="text-[#ff7a00]" />
             Up to 5 CPE Hours by ISACA
           </a>
         </div>
@@ -93,20 +85,20 @@ export function RadarHero() {
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* LEFT COLUMN: Headings, Lead Text, Buttons, Countdown (7 Cols) */}
           <div className="lg:col-span-7 text-left space-y-6">
-            <p className="eyebrow !text-[#ff003c] text-[#ff003c] font-mono text-xs uppercase tracking-widest block font-bold">
+            <p className="eyebrow !text-[#00f0ff] text-[#00f0ff] font-mono text-xs uppercase tracking-widest block font-bold text-glow-cyan">
               {`// TIMIȘOARA CYBERSECURITY CONFERENCE & CTF`}
             </p>
 
             <h1 className="display text-5xl sm:text-7xl lg:text-8xl font-black uppercase tracking-tight text-white leading-[0.92] text-left">
               ZeroDayTM
               <br />
-              <span className="text-[#ff003c] text-glow-red">
+              <span className="text-[#ff2a85] text-glow-pink">
                 Conference
               </span>{' '}
               <span className="text-white/60 font-mono text-3xl sm:text-5xl align-middle">
                 +
               </span>{' '}
-              <span className="text-[#ff2a55] text-glow-flare">
+              <span className="text-[#00f0ff] text-glow-cyan">
                 8h CTF.
               </span>
             </h1>
@@ -122,7 +114,7 @@ export function RadarHero() {
             <div className="pt-2 flex flex-wrap items-center gap-3.5">
               <a
                 href="/agenda"
-                className="group inline-flex items-center justify-center gap-2 rounded-xl border border-[#ff003c] bg-[#ff003c] px-6 py-3.5 font-mono text-xs font-bold uppercase tracking-[0.16em] text-white shadow-[0_0_28px_rgba(255,0,60,0.5)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#ff1a4f] hover:shadow-[0_0_42px_rgba(255,0,60,0.7)]"
+                className="group inline-flex items-center justify-center gap-2 rounded-xl border border-[#ff2a85] bg-[#ff2a85] px-6 py-3.5 font-mono text-xs font-bold uppercase tracking-[0.16em] text-white shadow-[0_0_28px_rgba(255,42,133,0.55)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#ff007f] hover:shadow-[0_0_42px_rgba(255,42,133,0.8)]"
               >
                 Explore Programme
                 <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
@@ -130,9 +122,9 @@ export function RadarHero() {
 
               <a
                 href="/ctf"
-                className="group inline-flex items-center justify-center gap-2 rounded-xl border border-[#ff2a55] bg-[#ff2a55]/20 px-6 py-3.5 font-mono text-xs font-bold uppercase tracking-[0.16em] text-white shadow-[0_0_24px_rgba(255,42,85,0.25)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#ff2a55]/35 hover:shadow-[0_0_35px_rgba(255,42,85,0.45)]"
+                className="group inline-flex items-center justify-center gap-2 rounded-xl border border-[#00f0ff] bg-[#00f0ff]/20 px-6 py-3.5 font-mono text-xs font-bold uppercase tracking-[0.16em] text-white shadow-[0_0_24px_rgba(0,240,255,0.3)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#00f0ff]/35 hover:shadow-[0_0_35px_rgba(0,240,255,0.55)]"
               >
-                <Trophy size={14} className="text-[#ff2a55]" />
+                <Trophy size={14} className="text-[#00f0ff]" />
                 Enter 8h CTF
               </a>
 
@@ -140,7 +132,7 @@ export function RadarHero() {
                 href="https://discord.gg/WTfZ26GAg5"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-5 py-3.5 font-mono text-xs font-bold uppercase tracking-[0.16em] text-white backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 hover:border-[#ff003c] hover:bg-[#180207]"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-5 py-3.5 font-mono text-xs font-bold uppercase tracking-[0.16em] text-white backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 hover:border-[#ff2a85] hover:bg-[#1a0418]"
               >
                 Join Discord ↗
               </a>
@@ -148,7 +140,7 @@ export function RadarHero() {
 
             {/* Live Countdown Matrix - Left Aligned */}
             <div className="pt-4">
-              <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#ff003c] font-bold mb-2.5 flex items-center gap-2">
+              <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#00f0ff] font-bold mb-2.5 flex items-center gap-2">
                 <Clock size={12} />
                 Countdown to Registration & Spring 2027
               </span>
@@ -162,12 +154,12 @@ export function RadarHero() {
                 ].map((u) => (
                   <div
                     key={u.label}
-                    className="p-3 sm:px-4 sm:py-2.5 rounded-xl border border-[#ff003c]/25 bg-[#0e0206]/80 backdrop-blur-md text-center min-w-[62px] sm:min-w-[72px]"
+                    className="p-3 sm:px-4 sm:py-2.5 rounded-xl border border-[#ff2a85]/30 bg-[#120524]/85 backdrop-blur-md text-center min-w-[62px] sm:min-w-[72px]"
                   >
                     <span className="block font-mono text-xl sm:text-2xl font-black text-white leading-none">
                       {String(u.value).padStart(2, '0')}
                     </span>
-                    <span className="block font-mono text-[9px] uppercase tracking-wider text-[#a38890] mt-1">
+                    <span className="block font-mono text-[9px] uppercase tracking-wider text-[#a89fc0] mt-1">
                       {u.label}
                     </span>
                   </div>
@@ -178,12 +170,12 @@ export function RadarHero() {
 
           {/* RIGHT COLUMN: Structured Box Matching Section 2 Style (5 Cols) */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="rounded-2xl border border-[#ff003c]/30 bg-[#0d0206]/92 backdrop-blur-xl p-6 shadow-2xl">
-              <div className="flex items-center justify-between border-b border-[#ff003c]/20 pb-3 mb-4">
-                <span className="font-mono text-[11px] font-bold uppercase tracking-widest text-[#ff003c]">
+            <div className="rounded-2xl border border-[#ff2a85]/35 bg-[#100424]/92 backdrop-blur-xl p-6 shadow-[0_12px_40px_rgba(0,0,0,0.8),0_0_30px_rgba(255,42,133,0.15)]">
+              <div className="flex items-center justify-between border-b border-[#ff2a85]/25 pb-3 mb-4">
+                <span className="font-mono text-[11px] font-bold uppercase tracking-widest text-[#ff2a85]">
                   {`// DUAL-MODE ARENA & VENUE`}
                 </span>
-                <span className="font-mono text-[10px] text-white/60 uppercase">
+                <span className="font-mono text-[10px] text-[#00f0ff] uppercase">
                   Timișoara · 2027
                 </span>
               </div>
@@ -202,15 +194,15 @@ export function RadarHero() {
                   onMouseLeave={() => setActiveAnchor(null)}
                   className={`p-4 rounded-xl border transition-all duration-200 cursor-pointer ${
                     activeAnchor === 0
-                      ? 'border-[#ff003c] bg-[#ff003c]/15 shadow-[0_0_20px_rgba(255,0,60,0.3)]'
-                      : 'border-white/10 bg-white/[0.03] hover:border-[#ff003c]/40'
+                      ? 'border-[#ff2a85] bg-[#ff2a85]/20 shadow-[0_0_20px_rgba(255,42,133,0.35)]'
+                      : 'border-white/10 bg-white/[0.03] hover:border-[#ff2a85]/40'
                   }`}
                 >
                   <div className="flex items-center justify-between">
-                    <span className="font-mono text-[10px] uppercase tracking-wider text-white/50">
+                    <span className="font-mono text-[10px] uppercase tracking-wider text-white/60">
                       Day 01 · Conference
                     </span>
-                    <Mic2 size={14} className="text-white" />
+                    <Mic2 size={14} className="text-[#ff2a85]" />
                   </div>
                   <h4 className="font-mono font-bold text-sm text-white mt-1 uppercase tracking-wide">
                     Speaker Panels & Keynotes
@@ -226,17 +218,17 @@ export function RadarHero() {
                   onMouseLeave={() => setActiveAnchor(null)}
                   className={`p-4 rounded-xl border transition-all duration-200 cursor-pointer ${
                     activeAnchor === 1
-                      ? 'border-[#ff2a55] bg-[#ff2a55]/20 shadow-[0_0_20px_rgba(255,42,85,0.35)]'
-                      : 'border-[#ff2a55]/30 bg-[#ff2a55]/[0.05] hover:border-[#ff2a55]/60'
+                      ? 'border-[#00f0ff] bg-[#00f0ff]/20 shadow-[0_0_20px_rgba(0,240,255,0.35)]'
+                      : 'border-[#00f0ff]/30 bg-[#00f0ff]/[0.05] hover:border-[#00f0ff]/60'
                   }`}
                 >
                   <div className="flex items-center justify-between">
-                    <span className="font-mono text-[10px] uppercase tracking-wider text-[#ff2a55] font-bold">
+                    <span className="font-mono text-[10px] uppercase tracking-wider text-[#00f0ff] font-bold">
                       Day 02 · 8 Hours
                     </span>
-                    <Trophy size={14} className="text-[#ff2a55]" />
+                    <Trophy size={14} className="text-[#00f0ff]" />
                   </div>
-                  <h4 className="font-mono font-bold text-sm text-[#ff2a55] mt-1 uppercase tracking-wide">
+                  <h4 className="font-mono font-bold text-sm text-[#00f0ff] mt-1 uppercase tracking-wide">
                     8h Jeopardy CTF Arena
                   </h4>
                   <p className="text-xs text-white/65 mt-1 leading-relaxed">
@@ -250,17 +242,17 @@ export function RadarHero() {
                   onMouseLeave={() => setActiveAnchor(null)}
                   className={`p-4 rounded-xl border transition-all duration-200 cursor-pointer ${
                     activeAnchor === 2
-                      ? 'border-[#ff003c] bg-[#ff003c]/20 shadow-[0_0_20px_rgba(255,0,60,0.3)]'
-                      : 'border-[#ff003c]/30 bg-[#ff003c]/[0.05] hover:border-[#ff003c]/60'
+                      ? 'border-[#9d4edd] bg-[#9d4edd]/20 shadow-[0_0_20px_rgba(157,78,221,0.35)]'
+                      : 'border-[#9d4edd]/30 bg-[#9d4edd]/[0.05] hover:border-[#9d4edd]/60'
                   }`}
                 >
                   <div className="flex items-center justify-between">
-                    <span className="font-mono text-[10px] uppercase tracking-wider text-[#ff003c] font-bold">
+                    <span className="font-mono text-[10px] uppercase tracking-wider text-[#9d4edd] font-bold">
                       Campus Hub
                     </span>
-                    <MapPin size={14} className="text-[#ff003c]" />
+                    <MapPin size={14} className="text-[#9d4edd]" />
                   </div>
-                  <h4 className="font-mono font-bold text-sm text-[#ff003c] mt-1 uppercase tracking-wide">
+                  <h4 className="font-mono font-bold text-sm text-[#9d4edd] mt-1 uppercase tracking-wide">
                     ICAM Timișoara
                   </h4>
                   <p className="text-xs text-white/65 mt-1 leading-relaxed">
