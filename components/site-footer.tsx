@@ -1,57 +1,113 @@
+import Image from 'next/image';
+import { MapPin, Mail } from 'lucide-react';
+
 export function SiteFooter() {
   return (
-    <footer className="site-footer">
-      <div className="container">
-        <div className="footer-top">
-          <p className="display footer-word">
-            Hack. Learn.
-            <br />
-            <span>Connect.</span>
-          </p>
-          <div className="footer-contact">
-            <p>
-              ZeroDayTM Edition #2
-              <br />
-              Timișoara · Spring 2027
+    <footer className="relative bg-[#030002] text-white pt-16 pb-12 overflow-hidden border-t border-[#ff003c]/20">
+      {/* Top glowing cyber Blackwall flare line */}
+      <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#ff003c] to-transparent opacity-90 shadow-[0_0_25px_rgba(255,0,60,0.85)]" />
+
+      <div className="container mx-auto px-4 md:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/10 items-start">
+          {/* Brand & Mission (5 Cols) */}
+          <div className="md:col-span-5 space-y-4">
+            <div className="flex items-center gap-3">
+              <div className="relative h-10 w-12">
+                <Image
+                  src="/logos/zeroday-logo-white.png"
+                  alt="ZeroDayTM"
+                  fill
+                  className="object-contain drop-shadow-[0_0_12px_rgba(255,0,60,0.5)]"
+                />
+              </div>
+              <span className="font-mono text-lg font-bold tracking-widest uppercase">
+                ZeroDay<span className="text-[#ff003c]">TM</span>
+              </span>
+            </div>
+
+            <p className="display text-2xl sm:text-3xl text-white/90 leading-tight">
+              HACK. LEARN.{' '}
+              <span className="text-[#ff003c] text-glow-red">
+                CONNECT.
+              </span>
             </p>
-            <a href="mailto:zerodaytm@gmail.com">
-              zerodaytm@gmail.com ↗
-            </a>
+
+            <p className="text-xs text-white/60 font-body max-w-sm leading-relaxed">
+              Western Romania&apos;s premier community-driven cybersecurity conference
+              and Capture The Flag competition. Hosted at West University of Timișoara ICAM.
+            </p>
+          </div>
+
+          {/* Quick Navigation (3 Cols) */}
+          <div className="md:col-span-3 space-y-3">
+            <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#ff003c] block font-bold">
+              {`// ARCHITECTURE`}
+            </span>
+            <div className="flex flex-col space-y-2 text-xs font-mono uppercase tracking-wider text-white/70">
+              <a href="/agenda" className="hover:text-[#ff003c] transition-colors">
+                Event Agenda ↗
+              </a>
+              <a href="/ctf" className="hover:text-[#ff003c] transition-colors">
+                Capture The Flag ↗
+              </a>
+              <a href="/edition-2026" className="hover:text-[#ff003c] transition-colors">
+                Edition #1 Archive ↗
+              </a>
+              <a href="/partners" className="hover:text-[#ff003c] transition-colors">
+                Partner with Us ↗
+              </a>
+              <a href="/contact" className="hover:text-[#ff003c] transition-colors">
+                Contact Organizers ↗
+              </a>
+            </div>
+          </div>
+
+          {/* Contact & Venue (4 Cols) */}
+          <div className="md:col-span-4 space-y-3">
+            <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#ff003c] block font-bold">
+              {`// LOCATION & COMMS`}
+            </span>
+            <div className="space-y-2 text-xs text-white/75 font-body">
+              <div className="flex items-center gap-2">
+                <MapPin size={14} className="text-[#ff003c] shrink-0" />
+                <span>ICAM Timișoara · West University of Timișoara</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail size={14} className="text-[#ff003c] shrink-0" />
+                <a href="mailto:zerodaytm@gmail.com" className="hover:text-[#ff003c] transition-colors font-mono">
+                  zerodaytm@gmail.com
+                </a>
+              </div>
+            </div>
+
+            {/* Social Badges */}
+            <div className="pt-3 flex flex-wrap gap-2">
+              {[
+                { name: 'Discord', href: 'https://discord.gg/WTfZ26GAg5' },
+                { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zerodaytm/' },
+                { name: 'Instagram', href: 'https://www.instagram.com/zerodaytm/' },
+                { name: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61588751345468' },
+              ].map((s) => (
+                <a
+                  key={s.name}
+                  href={s.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-lg border border-white/10 bg-white/5 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-white/70 hover:border-[#ff003c] hover:text-[#ff003c] hover:bg-[#ff003c]/10 transition-colors"
+                >
+                  {s.name} ↗
+                </a>
+              ))}
+            </div>
           </div>
         </div>
-        <div className="footer-bottom">
-          <a href="/">ZeroDayTM</a>
-          <div className="footer-socials">
-            <a
-              href="https://www.instagram.com/zerodaytm/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Instagram
-            </a>
-            <a
-              href="https://www.linkedin.com/company/zerodaytm/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              LinkedIn
-            </a>
-            <a
-              href="https://www.facebook.com/profile.php?id=61588751345468"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Facebook
-            </a>
-            <a
-              href="https://discord.gg/WTfZ26GAg5"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Discord
-            </a>
-          </div>
-          <span>© 2026–2027</span>
+
+        {/* Bottom copyright line */}
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left text-xs font-mono text-white/40">
+          <span>© 2026–2027 ZERODAYTM CONFERENCE & CTF. ALL RIGHTS RESERVED.</span>
+          <span className="text-[#ff003c]/80 font-bold">
+            TIMIȘOARA, ROMANIA · EDITION #2
+          </span>
         </div>
       </div>
     </footer>
